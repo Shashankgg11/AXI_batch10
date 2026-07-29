@@ -1,0 +1,252 @@
+# vsim -c tb_top hdl_top -do "run -all; quit" "+UVM_TESTNAME=single_seq_test" "+UVM_VERBOSITY=UVM_MEDIUM" 
+# Start time: 08:27:09 on Jul 29,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim
+# //  Version 10.6c linux Jul 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.cpu_if(fast)
+# Loading work.axi4_slave_driver_bfm(fast)
+# Loading work.axi4_slave_monitor_bfm(fast)
+# Loading work.axi4_globals_pkg(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.axi4_slave_pkg(fast)
+# Loading work.cpu_tb_pkg(fast)
+# Loading work.axi4_globals_pkg_sv_unit(fast)
+# Loading work.tb_top(fast)
+# Loading work.hdl_top(fast)
+# Loading work.axi4_slave_driver_bfm(fast)
+# Loading work.slave_assertions(fast)
+# Loading work.axi4_slave_monitor_bfm(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# ** Warning: (vsim-3015) /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/hdl_top/slave_agent_bfm/axi4_slave_agent_bfm.sv(120): [PCDPC] - Port size (4) does not match connection size (2) for port 'awcache'. The port definition is at: /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/hdl_top/slave_assertions.sv(22).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/axi4_slave_agent_bfm[0]/axi4_slave_agent_bfm_h/axi4_slave_drv_bfm_h/S_A File: /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/hdl_top/slave_assertions.sv
+# ** Warning: (vsim-3015) /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/hdl_top/slave_agent_bfm/axi4_slave_agent_bfm.sv(120): [PCDPC] - Port size (8) does not match connection size (4) for port 'arlen'. The port definition is at: /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/hdl_top/slave_assertions.sv(42).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/axi4_slave_agent_bfm[0]/axi4_slave_agent_bfm_h/axi4_slave_drv_bfm_h/S_A File: /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/hdl_top/slave_assertions.sv
+# ** Warning: (vsim-3015) /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/hdl_top/slave_agent_bfm/axi4_slave_agent_bfm.sv(120): [PCDPC] - Port size (4) does not match connection size (2) for port 'arcache'. The port definition is at: /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/hdl_top/slave_assertions.sv(46).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/axi4_slave_agent_bfm[0]/axi4_slave_agent_bfm_h/axi4_slave_drv_bfm_h/S_A File: /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/hdl_top/slave_assertions.sv
+# Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test single_seq_test...
+# HDL_TOP
+# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_agent_bfm.sv(174) @ 0: reporter [axi4 slave agent bfm] AXI4 SLAVE AGENT BFM
+# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(84) @ 0: reporter [axi4 slave driver bfm] AXI4 SLAVE DRIVER BFM
+# UVM_INFO hdl_top/slave_assertions.sv(70) @ 0: reporter [SLAVE_ASSERTIONS] SLAVE_ASSERTIONS
+# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_monitor_bfm.sv(82) @ 0: reporter [axi4 slave monitor bfm] AXI4 SLAVE MONITOR BFM
+# ** Warning: (vsim-8474) /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/vip/axi_slave_vip/axi4_slave_coverage.sv(33): A higher value '15' is found in bin 'AWLEN_16' of Coverpoint 'AWLEN_CP'. It is invalid and will be ignored.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'AWLEN_16' in Coverpoint 'AWLEN_CP' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8474) /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/vip/axi_slave_vip/axi4_slave_coverage.sv(34): A higher value '31' is found in bin 'AWLEN_32' of Coverpoint 'AWLEN_CP'. It is invalid and will be ignored.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'AWLEN_32' in Coverpoint 'AWLEN_CP' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8474) /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/vip/axi_slave_vip/axi4_slave_coverage.sv(35): A higher value '63' is found in bin 'AWLEN_64' of Coverpoint 'AWLEN_CP'. It is invalid and will be ignored.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'AWLEN_64' in Coverpoint 'AWLEN_CP' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8474) /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/vip/axi_slave_vip/axi4_slave_coverage.sv(36): A higher value '127' is found in bin 'AWLEN_128' of Coverpoint 'AWLEN_CP'. It is invalid and will be ignored.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'AWLEN_128' in Coverpoint 'AWLEN_CP' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8474) /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/vip/axi_slave_vip/axi4_slave_coverage.sv(37): A higher value '255' is found in bin 'AWLEN_256' of Coverpoint 'AWLEN_CP'. It is invalid and will be ignored.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'AWLEN_256' in Coverpoint 'AWLEN_CP' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8474) /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/vip/axi_slave_vip/axi4_slave_coverage.sv(102): A higher value '15' is found in bin 'ARLEN_16' of Coverpoint 'ARLEN_CP'. It is invalid and will be ignored.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'ARLEN_16' in Coverpoint 'ARLEN_CP' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8474) /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/vip/axi_slave_vip/axi4_slave_coverage.sv(103): A higher value '31' is found in bin 'ARLEN_32' of Coverpoint 'ARLEN_CP'. It is invalid and will be ignored.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'ARLEN_32' in Coverpoint 'ARLEN_CP' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8474) /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/vip/axi_slave_vip/axi4_slave_coverage.sv(104): A higher value '63' is found in bin 'ARLEN_64' of Coverpoint 'ARLEN_CP'. It is invalid and will be ignored.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'ARLEN_64' in Coverpoint 'ARLEN_CP' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8474) /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/vip/axi_slave_vip/axi4_slave_coverage.sv(105): A higher value '127' is found in bin 'ARLEN_128' of Coverpoint 'ARLEN_CP'. It is invalid and will be ignored.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'ARLEN_128' in Coverpoint 'ARLEN_CP' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8474) /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/vip/axi_slave_vip/axi4_slave_coverage.sv(106): A higher value '255' is found in bin 'ARLEN_256' of Coverpoint 'ARLEN_CP'. It is invalid and will be ignored.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'ARLEN_256' in Coverpoint 'ARLEN_CP' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# ------------------------------------------------------------------------------------------
+# Name                                               Type                        Size  Value
+# ------------------------------------------------------------------------------------------
+# uvm_test_top                                       single_seq_test             -     @469 
+#   env_h                                            top_env                     -     @488 
+#     axi_vip_env_h                                  axi_vip_env                 -     @502 
+#       slave_agt_h                                  axi4_slave_agent            -     @618 
+#         axi4_slave_cov_h                           axi4_slave_coverage         -     @1323
+#           analysis_imp                             uvm_analysis_imp            -     @1330
+#         axi4_slave_drv_proxy_h                     axi4_slave_driver_proxy     -     @628 
+#           axi4_slave_read_addr_fifo_h              uvm_tlm_fifo #(T)           -     @839 
+#             get_ap                                 uvm_analysis_port           -     @870 
+#             get_peek_export                        uvm_get_peek_imp            -     @854 
+#             put_ap                                 uvm_analysis_port           -     @862 
+#             put_export                             uvm_put_imp                 -     @846 
+#           axi4_slave_read_data_in_fifo_h           uvm_tlm_fifo #(T)           -     @878 
+#             get_ap                                 uvm_analysis_port           -     @909 
+#             get_peek_export                        uvm_get_peek_imp            -     @893 
+#             put_ap                                 uvm_analysis_port           -     @901 
+#             put_export                             uvm_put_imp                 -     @885 
+#           axi4_slave_write_addr_fifo_h             uvm_tlm_fifo #(T)           -     @683 
+#             get_ap                                 uvm_analysis_port           -     @714 
+#             get_peek_export                        uvm_get_peek_imp            -     @698 
+#             put_ap                                 uvm_analysis_port           -     @706 
+#             put_export                             uvm_put_imp                 -     @690 
+#           axi4_slave_write_data_in_fifo_h          uvm_tlm_fifo #(T)           -     @722 
+#             get_ap                                 uvm_analysis_port           -     @753 
+#             get_peek_export                        uvm_get_peek_imp            -     @737 
+#             put_ap                                 uvm_analysis_port           -     @745 
+#             put_export                             uvm_put_imp                 -     @729 
+#           axi4_slave_write_data_out_fifo_h         uvm_tlm_fifo #(T)           -     @800 
+#             get_ap                                 uvm_analysis_port           -     @831 
+#             get_peek_export                        uvm_get_peek_imp            -     @815 
+#             put_ap                                 uvm_analysis_port           -     @823 
+#             put_export                             uvm_put_imp                 -     @807 
+#           axi4_slave_write_response_fifo_h         uvm_tlm_fifo #(T)           -     @761 
+#             get_ap                                 uvm_analysis_port           -     @792 
+#             get_peek_export                        uvm_get_peek_imp            -     @776 
+#             put_ap                                 uvm_analysis_port           -     @784 
+#             put_export                             uvm_put_imp                 -     @768 
+#           axi_read_rsp_port                        uvm_analysis_port           -     @675 
+#           axi_read_seq_item_port                   uvm_seq_item_pull_port      -     @659 
+#           axi_write_rsp_port                       uvm_analysis_port           -     @667 
+#           axi_write_seq_item_port                  uvm_seq_item_pull_port      -     @651 
+#           rsp_port                                 uvm_analysis_port           -     @643 
+#           seq_item_port                            uvm_seq_item_pull_port      -     @635 
+#         axi4_slave_mon_proxy_h                     axi4_slave_monitor_proxy    -     @1135
+#           axi4_slave_read_address_analysis_port    uvm_analysis_port           -     @1142
+#           axi4_slave_read_data_analysis_port       uvm_analysis_port           -     @1150
+#           axi4_slave_read_fifo_h                   uvm_tlm_analysis_fifo #(T)  -     @1276
+#             analysis_export                        uvm_analysis_imp            -     @1315
+#             get_ap                                 uvm_analysis_port           -     @1307
+#             get_peek_export                        uvm_get_peek_imp            -     @1291
+#             put_ap                                 uvm_analysis_port           -     @1299
+#             put_export                             uvm_put_imp                 -     @1283
+#           axi4_slave_write_address_analysis_port   uvm_analysis_port           -     @1158
+#           axi4_slave_write_address_fifo_h          uvm_tlm_analysis_fifo #(T)  -     @1182
+#             analysis_export                        uvm_analysis_imp            -     @1221
+#             get_ap                                 uvm_analysis_port           -     @1213
+#             get_peek_export                        uvm_get_peek_imp            -     @1197
+#             put_ap                                 uvm_analysis_port           -     @1205
+#             put_export                             uvm_put_imp                 -     @1189
+#           axi4_slave_write_data_analysis_port      uvm_analysis_port           -     @1166
+#           axi4_slave_write_data_fifo_h             uvm_tlm_analysis_fifo #(T)  -     @1229
+#             analysis_export                        uvm_analysis_imp            -     @1268
+#             get_ap                                 uvm_analysis_port           -     @1260
+#             get_peek_export                        uvm_get_peek_imp            -     @1244
+#             put_ap                                 uvm_analysis_port           -     @1252
+#             put_export                             uvm_put_imp                 -     @1236
+#           axi4_slave_write_response_analysis_port  uvm_analysis_port           -     @1174
+#         axi4_slave_read_seqr_h                     axi4_slave_read_sequencer   -     @1026
+#           rsp_export                               uvm_analysis_export         -     @1033
+#           seq_item_export                          uvm_seq_item_pull_imp       -     @1127
+#           arbitration_queue                        array                       0     -    
+#           lock_queue                               array                       0     -    
+#           num_last_reqs                            integral                    32    'd1  
+#           num_last_rsps                            integral                    32    'd1  
+#         axi4_slave_write_seqr_h                    axi4_slave_write_sequencer  -     @917 
+#           rsp_export                               uvm_analysis_export         -     @924 
+#           seq_item_export                          uvm_seq_item_pull_imp       -     @1018
+#           arbitration_queue                        array                       0     -    
+#           lock_queue                               array                       0     -    
+#           num_last_reqs                            integral                    32    'd1  
+#           num_last_rsps                            integral                    32    'd1  
+#     cpu_env_h                                      cpu_env                     -     @495 
+#       cpu_agt_h                                    cpu_agent                   -     @1350
+#         cpu_drv_h                                  cpu_driver                  -     @1474
+#           rsp_port                                 uvm_analysis_port           -     @1489
+#           seq_item_port                            uvm_seq_item_pull_port      -     @1481
+#         cpu_mon_h                                  cpu_monitor                 -     @1497
+#           rd_ap                                    uvm_analysis_port           -     @1512
+#           wr_ap                                    uvm_analysis_port           -     @1504
+#         cpu_seqr_h                                 cpu_sequencer               -     @1365
+#           rsp_export                               uvm_analysis_export         -     @1372
+#           seq_item_export                          uvm_seq_item_pull_imp       -     @1466
+#           arbitration_queue                        array                       0     -    
+#           lock_queue                               array                       0     -    
+#           num_last_reqs                            integral                    32    'd1  
+#           num_last_rsps                            integral                    32    'd1  
+#       sb_h                                         cpu_scoreboard              -     @1357
+#         read                                       uvm_analysis_imp_read       -     @1535
+#         write                                      uvm_analysis_imp_write      -     @1527
+#     vseqr_h                                        top_vseqr                   -     @509 
+#       rsp_export                                   uvm_analysis_export         -     @516 
+#       seq_item_export                              uvm_seq_item_pull_imp       -     @610 
+#       arbitration_queue                            array                       0     -    
+#       lock_queue                                   array                       0     -    
+#       num_last_reqs                                integral                    32    'd1  
+#       num_last_rsps                                integral                    32    'd1  
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(141) @ 0: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [axi4_slave_driver_proxy] SLAVE_DRIVER_PROXY
+# UVM_INFO tb/cpu_agent/cpu_monitor.sv(43) @ 10000: uvm_test_top.env_h.cpu_env_h.cpu_agt_h.cpu_mon_h [cpu_monitor] WRITE: wr_en=1 full=0 wr_data=aae30136fa71747fffffdde22d74c320
+# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(111) @ 10000: reporter [AXI4_SLAVE_DRIVER_BFM] SYSTEM RESET ACTIVATED
+# UVM_INFO tb/cpu_agent/cpu_monitor.sv(43) @ 30000: uvm_test_top.env_h.cpu_env_h.cpu_agt_h.cpu_mon_h [cpu_monitor] WRITE: wr_en=1 full=0 wr_data=878126c7d3321475e215300000000000
+# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(126) @ 30000: reporter [AXI4_SLAVE_DRIVER_BFM] SYSTEM RESET DE-ACTIVATED
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 30000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO vip/axi_slave_vip/axi4_slave_coverage.sv(231) @ 30000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_cov_h [axi4_slave_coverage] AXI4 Slave Agent Coverage = 0.00 %
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   15
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [AXI4_SLAVE_DRIVER_BFM]     2
+# [Questa UVM]     2
+# [RNTST]     1
+# [SLAVE_ASSERTIONS]     1
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# [axi4 slave agent bfm]     1
+# [axi4 slave driver bfm]     1
+# [axi4 slave monitor bfm]     1
+# [axi4_slave_coverage]     1
+# [axi4_slave_driver_proxy]     1
+# [cpu_monitor]     2
+# ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 30 ns  Iteration: 61  Instance: /tb_top
+# End time: 08:27:11 on Jul 29,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 23

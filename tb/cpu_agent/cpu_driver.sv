@@ -32,15 +32,20 @@ class cpu_driver extends uvm_driver #(cpu_tx);
 
   task write(cpu_tx req);
     bit[127:0] fifo_words[$];
+    bit was_full;
 
     if(!req.wr_en) return;
 
     create_pkt(req, fifo_words);
 
-    foreach (fifo_words[i]) begin 
-      vif.wr_en   <= 1'b1;
-      vif.wr_data <= fifo_words[i];
-      @(posedge vif.clk);                  
+    foreach (fifo_words[i]) begin
+      do begin
+        was_full    = vif.full;      // sample BEFORE the edge, at assertion time
+        vif.wr_en   <= 1'b1;
+        vif.wr_data <= fifo_words[i];
+        @(posedge vif.clk);
+      end while (was_full);           // retry THIS beat if it was rejected - don't
+                                       // silently move on and corrupt the packet
     end
     vif.wr_en   <= 1'b0;
     vif.wr_data <= '0;
@@ -48,13 +53,15 @@ class cpu_driver extends uvm_driver #(cpu_tx);
 
 
   task read(cpu_tx req);
+    bit was_empty;
+
     if (!req.rd_en) return;
 
-    vif.rd_en <= 1'b0;
-    while (vif.empty) @(posedge vif.clk);
-
-    vif.rd_en <= 1'b1;
-    @(posedge vif.clk);
+    do begin
+      was_empty = vif.empty;
+      vif.rd_en <= 1'b1;
+      @(posedge vif.clk);
+    end while (was_empty);
 
     vif.rd_en <= 1'b0;
   endtask

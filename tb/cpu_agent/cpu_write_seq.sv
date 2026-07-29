@@ -16,7 +16,9 @@ class cpu_write_seq extends uvm_sequence #(cpu_tx);
 
     assert(req.randomize() with {
       pkt_type == WRITE_PKT;
-      strobe != 0;
+      wr_en == 1;
+      rd_en == 0;
+      foreach (strobe[i]) strobe[i] == 1;
     });
 
     finish_item(req);
