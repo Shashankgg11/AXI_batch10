@@ -30,6 +30,7 @@ class cpu_scoreboard extends uvm_scoreboard;
   endfunction
 
   function void write_write(cpu_tx t1);
+    $display("cpu scoreboard request received  full=%0b wr_data=0x%032h fifo_size=%0d wr_fifo_depth=%0d",t1.full, t1.wr_data, write_fifo.size(), wr_fifo_depth);
     if (t1.full == 1) begin
       if (write_fifo.size() >= wr_fifo_depth)
         `uvm_info(get_type_name(), "full check MATCH: model also full", UVM_LOW)

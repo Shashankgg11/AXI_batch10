@@ -43,6 +43,7 @@ class cpu_driver extends uvm_driver #(cpu_tx);
         was_full    = vif.full;      // sample BEFORE the edge, at assertion time
         vif.wr_en   <= 1'b1;
         vif.wr_data <= fifo_words[i];
+        $display($time,"my cpu driver wr_data = 0x%032h", fifo_words[i]);
         @(posedge vif.clk);
       end while (was_full);           // retry THIS beat if it was rejected - don't
                                        // silently move on and corrupt the packet

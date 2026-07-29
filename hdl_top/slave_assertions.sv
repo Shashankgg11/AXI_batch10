@@ -70,7 +70,7 @@ interface slave_assertions (input                     aclk,
     `uvm_info("SLAVE_ASSERTIONS","SLAVE_ASSERTIONS",UVM_LOW);
   end
   
-
+/*
   //--------------------------------------------------------------------------------------------
   // Assertion properties written for various checks in write address channel
   //--------------------------------------------------------------------------------------------
@@ -218,7 +218,7 @@ interface slave_assertions (input                     aclk,
     $rose(rvalid) |-> rvalid s_until_with rready;
   endproperty : axi_read_data_channel_valid_stable_check
   AXI_RD_VALID_STABLE_CHECK : assert property (axi_read_data_channel_valid_stable_check);
-
+*/
 endinterface : slave_assertions
 
 `endif

@@ -1,5 +1,5 @@
 # vsim -c tb_top hdl_top -do "run -all; quit" "+UVM_TESTNAME=single_seq_test" "+UVM_VERBOSITY=UVM_MEDIUM" 
-# Start time: 08:27:09 on Jul 29,2026
+# Start time: 21:32:47 on Jul 29,2026
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
@@ -30,12 +30,12 @@
 # Loading work.slave_assertions(fast)
 # Loading work.axi4_slave_monitor_bfm(fast)
 # Loading mtiUvm.questa_uvm_pkg(fast)
-# ** Warning: (vsim-3015) /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/hdl_top/slave_agent_bfm/axi4_slave_agent_bfm.sv(120): [PCDPC] - Port size (4) does not match connection size (2) for port 'awcache'. The port definition is at: /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/hdl_top/slave_assertions.sv(22).
-#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/axi4_slave_agent_bfm[0]/axi4_slave_agent_bfm_h/axi4_slave_drv_bfm_h/S_A File: /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/hdl_top/slave_assertions.sv
-# ** Warning: (vsim-3015) /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/hdl_top/slave_agent_bfm/axi4_slave_agent_bfm.sv(120): [PCDPC] - Port size (8) does not match connection size (4) for port 'arlen'. The port definition is at: /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/hdl_top/slave_assertions.sv(42).
-#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/axi4_slave_agent_bfm[0]/axi4_slave_agent_bfm_h/axi4_slave_drv_bfm_h/S_A File: /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/hdl_top/slave_assertions.sv
-# ** Warning: (vsim-3015) /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/hdl_top/slave_agent_bfm/axi4_slave_agent_bfm.sv(120): [PCDPC] - Port size (4) does not match connection size (2) for port 'arcache'. The port definition is at: /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/hdl_top/slave_assertions.sv(46).
-#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/axi4_slave_agent_bfm[0]/axi4_slave_agent_bfm_h/axi4_slave_drv_bfm_h/S_A File: /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/hdl_top/slave_assertions.sv
+# ** Warning: (vsim-3015) hdl_top/slave_agent_bfm/axi4_slave_agent_bfm.sv(120): [PCDPC] - Port size (4) does not match connection size (2) for port 'awcache'. The port definition is at: hdl_top/slave_assertions.sv(22).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/axi4_slave_agent_bfm[0]/axi4_slave_agent_bfm_h/axi4_slave_drv_bfm_h/S_A File: hdl_top/slave_assertions.sv
+# ** Warning: (vsim-3015) hdl_top/slave_agent_bfm/axi4_slave_agent_bfm.sv(120): [PCDPC] - Port size (8) does not match connection size (4) for port 'arlen'. The port definition is at: hdl_top/slave_assertions.sv(42).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/axi4_slave_agent_bfm[0]/axi4_slave_agent_bfm_h/axi4_slave_drv_bfm_h/S_A File: hdl_top/slave_assertions.sv
+# ** Warning: (vsim-3015) hdl_top/slave_agent_bfm/axi4_slave_agent_bfm.sv(120): [PCDPC] - Port size (4) does not match connection size (2) for port 'arcache'. The port definition is at: hdl_top/slave_assertions.sv(46).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/axi4_slave_agent_bfm[0]/axi4_slave_agent_bfm_h/axi4_slave_drv_bfm_h/S_A File: hdl_top/slave_assertions.sv
 # Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
 # run -all
 # ----------------------------------------------------------------
@@ -66,43 +66,43 @@
 # UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(84) @ 0: reporter [axi4 slave driver bfm] AXI4 SLAVE DRIVER BFM
 # UVM_INFO hdl_top/slave_assertions.sv(70) @ 0: reporter [SLAVE_ASSERTIONS] SLAVE_ASSERTIONS
 # UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_monitor_bfm.sv(82) @ 0: reporter [axi4 slave monitor bfm] AXI4 SLAVE MONITOR BFM
-# ** Warning: (vsim-8474) /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/vip/axi_slave_vip/axi4_slave_coverage.sv(33): A higher value '15' is found in bin 'AWLEN_16' of Coverpoint 'AWLEN_CP'. It is invalid and will be ignored.
+# ** Warning: (vsim-8474) vip/axi_slave_vip/axi4_slave_coverage.sv(33): A higher value '15' is found in bin 'AWLEN_16' of Coverpoint 'AWLEN_CP'. It is invalid and will be ignored.
 #    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
 # ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'AWLEN_16' in Coverpoint 'AWLEN_CP' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list. The bin will be taken out of coverage calculation.
 #    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-8474) /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/vip/axi_slave_vip/axi4_slave_coverage.sv(34): A higher value '31' is found in bin 'AWLEN_32' of Coverpoint 'AWLEN_CP'. It is invalid and will be ignored.
+# ** Warning: (vsim-8474) vip/axi_slave_vip/axi4_slave_coverage.sv(34): A higher value '31' is found in bin 'AWLEN_32' of Coverpoint 'AWLEN_CP'. It is invalid and will be ignored.
 #    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
 # ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'AWLEN_32' in Coverpoint 'AWLEN_CP' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list. The bin will be taken out of coverage calculation.
 #    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-8474) /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/vip/axi_slave_vip/axi4_slave_coverage.sv(35): A higher value '63' is found in bin 'AWLEN_64' of Coverpoint 'AWLEN_CP'. It is invalid and will be ignored.
+# ** Warning: (vsim-8474) vip/axi_slave_vip/axi4_slave_coverage.sv(35): A higher value '63' is found in bin 'AWLEN_64' of Coverpoint 'AWLEN_CP'. It is invalid and will be ignored.
 #    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
 # ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'AWLEN_64' in Coverpoint 'AWLEN_CP' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list. The bin will be taken out of coverage calculation.
 #    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-8474) /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/vip/axi_slave_vip/axi4_slave_coverage.sv(36): A higher value '127' is found in bin 'AWLEN_128' of Coverpoint 'AWLEN_CP'. It is invalid and will be ignored.
+# ** Warning: (vsim-8474) vip/axi_slave_vip/axi4_slave_coverage.sv(36): A higher value '127' is found in bin 'AWLEN_128' of Coverpoint 'AWLEN_CP'. It is invalid and will be ignored.
 #    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
 # ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'AWLEN_128' in Coverpoint 'AWLEN_CP' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list. The bin will be taken out of coverage calculation.
 #    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-8474) /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/vip/axi_slave_vip/axi4_slave_coverage.sv(37): A higher value '255' is found in bin 'AWLEN_256' of Coverpoint 'AWLEN_CP'. It is invalid and will be ignored.
+# ** Warning: (vsim-8474) vip/axi_slave_vip/axi4_slave_coverage.sv(37): A higher value '255' is found in bin 'AWLEN_256' of Coverpoint 'AWLEN_CP'. It is invalid and will be ignored.
 #    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
 # ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'AWLEN_256' in Coverpoint 'AWLEN_CP' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list. The bin will be taken out of coverage calculation.
 #    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-8474) /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/vip/axi_slave_vip/axi4_slave_coverage.sv(102): A higher value '15' is found in bin 'ARLEN_16' of Coverpoint 'ARLEN_CP'. It is invalid and will be ignored.
+# ** Warning: (vsim-8474) vip/axi_slave_vip/axi4_slave_coverage.sv(102): A higher value '15' is found in bin 'ARLEN_16' of Coverpoint 'ARLEN_CP'. It is invalid and will be ignored.
 #    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
 # ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'ARLEN_16' in Coverpoint 'ARLEN_CP' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list. The bin will be taken out of coverage calculation.
 #    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-8474) /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/vip/axi_slave_vip/axi4_slave_coverage.sv(103): A higher value '31' is found in bin 'ARLEN_32' of Coverpoint 'ARLEN_CP'. It is invalid and will be ignored.
+# ** Warning: (vsim-8474) vip/axi_slave_vip/axi4_slave_coverage.sv(103): A higher value '31' is found in bin 'ARLEN_32' of Coverpoint 'ARLEN_CP'. It is invalid and will be ignored.
 #    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
 # ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'ARLEN_32' in Coverpoint 'ARLEN_CP' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list. The bin will be taken out of coverage calculation.
 #    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-8474) /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/vip/axi_slave_vip/axi4_slave_coverage.sv(104): A higher value '63' is found in bin 'ARLEN_64' of Coverpoint 'ARLEN_CP'. It is invalid and will be ignored.
+# ** Warning: (vsim-8474) vip/axi_slave_vip/axi4_slave_coverage.sv(104): A higher value '63' is found in bin 'ARLEN_64' of Coverpoint 'ARLEN_CP'. It is invalid and will be ignored.
 #    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
 # ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'ARLEN_64' in Coverpoint 'ARLEN_CP' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list. The bin will be taken out of coverage calculation.
 #    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-8474) /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/vip/axi_slave_vip/axi4_slave_coverage.sv(105): A higher value '127' is found in bin 'ARLEN_128' of Coverpoint 'ARLEN_CP'. It is invalid and will be ignored.
+# ** Warning: (vsim-8474) vip/axi_slave_vip/axi4_slave_coverage.sv(105): A higher value '127' is found in bin 'ARLEN_128' of Coverpoint 'ARLEN_CP'. It is invalid and will be ignored.
 #    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
 # ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'ARLEN_128' in Coverpoint 'ARLEN_CP' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list. The bin will be taken out of coverage calculation.
 #    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
-# ** Warning: (vsim-8474) /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10_temp/AXI_batch10_temp-main/AXI_batch10_temp-main/vip/axi_slave_vip/axi4_slave_coverage.sv(106): A higher value '255' is found in bin 'ARLEN_256' of Coverpoint 'ARLEN_CP'. It is invalid and will be ignored.
+# ** Warning: (vsim-8474) vip/axi_slave_vip/axi4_slave_coverage.sv(106): A higher value '255' is found in bin 'ARLEN_256' of Coverpoint 'ARLEN_CP'. It is invalid and will be ignored.
 #    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
 # ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'ARLEN_256' in Coverpoint 'ARLEN_CP' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list. The bin will be taken out of coverage calculation.
 #    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
@@ -219,22 +219,23 @@
 # ------------------------------------------------------------------------------------------
 # 
 # UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(141) @ 0: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [axi4_slave_driver_proxy] SLAVE_DRIVER_PROXY
-# UVM_INFO tb/cpu_agent/cpu_monitor.sv(43) @ 10000: uvm_test_top.env_h.cpu_env_h.cpu_agt_h.cpu_mon_h [cpu_monitor] WRITE: wr_en=1 full=0 wr_data=aae30136fa71747fffffdde22d74c320
+# pkt_type=WRITE_PKT sop=0xaa txn_id=0xe addr=0x30136fa7 len=3 size=0 burst=2 lock=2 cache=0 prot=7 wr_en=1 rd_en=0 full=0 empty=0 wr_data=0x00000000000000000000000000000000 rd_data=0x00000000000000000000000000000000 eop=0x53 data='{253, 222, 34, 215} strobe='{1, 1, 1, 1}
+#                    0my cpu driver wr_data = 0xaae30136fa73147ffdde22d753000000
+# cpu scoreboard request received  full=0 wr_data=0xaae30136fa73147ffdde22d753000000 fifo_size=0 wr_fifo_depth=4096
+# UVM_INFO tb/cpu_agent/cpu_monitor.sv(43) @ 10000: uvm_test_top.env_h.cpu_env_h.cpu_agt_h.cpu_mon_h [cpu_monitor] WRITE: wr_en=1 full=0 wr_data=aae30136fa73147ffdde22d753000000
 # UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(111) @ 10000: reporter [AXI4_SLAVE_DRIVER_BFM] SYSTEM RESET ACTIVATED
-# UVM_INFO tb/cpu_agent/cpu_monitor.sv(43) @ 30000: uvm_test_top.env_h.cpu_env_h.cpu_agt_h.cpu_mon_h [cpu_monitor] WRITE: wr_en=1 full=0 wr_data=878126c7d3321475e215300000000000
-# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(126) @ 30000: reporter [AXI4_SLAVE_DRIVER_BFM] SYSTEM RESET DE-ACTIVATED
-# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 30000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO vip/axi_slave_vip/axi4_slave_coverage.sv(231) @ 30000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_cov_h [axi4_slave_coverage] AXI4 Slave Agent Coverage = 0.00 %
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 10000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO vip/axi_slave_vip/axi4_slave_coverage.sv(231) @ 10000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_cov_h [axi4_slave_coverage] AXI4 Slave Agent Coverage = 0.00 %
 # 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :   15
+# UVM_INFO :   13
 # UVM_WARNING :    0
 # UVM_ERROR :    0
 # UVM_FATAL :    0
 # ** Report counts by id
-# [AXI4_SLAVE_DRIVER_BFM]     2
+# [AXI4_SLAVE_DRIVER_BFM]     1
 # [Questa UVM]     2
 # [RNTST]     1
 # [SLAVE_ASSERTIONS]     1
@@ -245,8 +246,8 @@
 # [axi4 slave monitor bfm]     1
 # [axi4_slave_coverage]     1
 # [axi4_slave_driver_proxy]     1
-# [cpu_monitor]     2
+# [cpu_monitor]     1
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
-#    Time: 30 ns  Iteration: 61  Instance: /tb_top
-# End time: 08:27:11 on Jul 29,2026, Elapsed time: 0:00:02
+#    Time: 10 ns  Iteration: 62  Instance: /tb_top
+# End time: 21:32:48 on Jul 29,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 23
