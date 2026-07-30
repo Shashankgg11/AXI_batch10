@@ -35,23 +35,21 @@ class axi4_virtual_write_seq extends uvm_sequence;
     cpu_write_seq        cpu_wr_seq;
     axi4_slave_write_seq slv_wr_seq;
 
-    fork
-      // Background: AXI4 slave VIP keeps accepting/responding to write
-      // bursts for as long as the foreground branch below is running.
-      begin
-        forever begin
-          slv_wr_seq = axi4_slave_write_seq::type_id::create("slv_wr_seq");
-          slv_wr_seq.start(p_sequencer.slave_write_sqr_h);
-        end
-      end
-      // Foreground: drive num_txns CPU writes.
-      begin
-        repeat (num_txns) begin
-          cpu_wr_seq = cpu_write_seq::type_id::create("cpu_wr_seq");
-          cpu_wr_seq.start(p_sequencer.cpu_sqr_h);
-        end
-      end
-    join_any
-    disable fork;
+fork
+  begin
+    forever begin
+      slv_wr_seq = axi4_slave_write_seq::type_id::create("slv_wr_seq");
+      slv_wr_seq.start(p_sequencer.slave_write_sqr_h);
+    end
+  end
+join_none
+
+begin
+  cpu_wr_seq = cpu_write_seq::type_id::create("cpu_wr_seq");
+  cpu_wr_seq.start(p_sequencer.cpu_sqr_h);
+end
+
+wait fork;
+
   endtask
 endclass
