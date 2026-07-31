@@ -17,10 +17,10 @@ class cpu_driver extends uvm_driver #(cpu_tx);
     vif.wr_en   <= 1'b0;
     vif.wr_data <= '0;
     vif.rd_en   <= 1'b0;
-
+    #1000;
     forever begin
       seq_item_port.get_next_item(req);
-
+      
       fork
         write(req);
         read(req);
