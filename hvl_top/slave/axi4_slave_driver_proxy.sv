@@ -163,7 +163,7 @@ task axi4_slave_driver_proxy::axi4_write_task();
     process response_tx;
 
     axi_write_seq_item_port.get_next_item(req_wr);
-
+    req_wr.print();
     // writting the req into write data and response fifo's
     axi4_slave_write_data_in_fifo_h.put(req_wr);
     axi4_slave_write_response_fifo_h.put(req_wr);

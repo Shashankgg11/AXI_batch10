@@ -47,9 +47,10 @@ join_none
 begin
   cpu_wr_seq = cpu_write_seq::type_id::create("cpu_wr_seq");
   cpu_wr_seq.start(p_sequencer.cpu_sqr_h);
+  #1000;
 end
 
-wait fork;
+disable fork;
 
   endtask
 endclass

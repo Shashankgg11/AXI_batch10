@@ -18,12 +18,13 @@ class cpu_write_seq extends uvm_sequence #(cpu_tx);
       pkt_type == WRITE_PKT;
       wr_en == 1;
       rd_en == 0;
-      size == 0;
-      len == 3;
+      size == 2;
+      len == 0;
       lock == 0;
       cache == 0;
       prot == 0;
       burst == 1;
+      addr == 100;
       foreach (strobe[i]) strobe[i] == 1;
     });
     $display("pkt_type=%s sop=0x%0h txn_id=0x%0h addr=0x%08h len=%0d size=%0d burst=%0d lock=%0d cache=%0d prot=%0d wr_en=%0b rd_en=%0b full=%0b empty=%0b wr_data=0x%032h rd_data=0x%032h eop=0x%0h data=%p strobe=%p",

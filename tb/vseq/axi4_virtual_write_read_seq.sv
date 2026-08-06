@@ -23,7 +23,6 @@ join_none
 begin
   cpu_wr_seq = cpu_write_seq::type_id::create("cpu_wr_seq");
   cpu_wr_seq.start(p_sequencer.cpu_sqr_h);
-  #1000;
 end
 disable fork;
 
@@ -37,7 +36,6 @@ join_none
 begin
   cpu_rd_seq = cpu_read_seq::type_id::create("cpu_rd_seq");
   cpu_rd_seq.start(p_sequencer.cpu_sqr_h);
-  #1000;
 end
 disable fork;
 

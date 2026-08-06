@@ -20,7 +20,6 @@ class axi4_virtual_write_test extends base_test;
     if (!seq.randomize() with { num_txns == 10; })
       `uvm_error(get_type_name(), "randomize failed")
     seq.start(env_h.vseqr_h);
-    #1000;
     phase.drop_objection(this);
   endtask
 
