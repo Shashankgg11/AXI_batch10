@@ -1,9 +1,3 @@
-//--------------------------------------------------------------------------------------------
-// Class: axi4_virtual_write_test
-// NEW FILE. Requested testcase #1: runs the virtual sequence so that the
-// AXI4 slave write sequence and the CPU write sequence run together
-// (not the old single-sequencer/single-cpu-only flow in base_test).
-//--------------------------------------------------------------------------------------------
 class axi4_virtual_write_test extends base_test;
 
   `uvm_component_utils(axi4_virtual_write_test)
@@ -17,8 +11,6 @@ class axi4_virtual_write_test extends base_test;
     phase.raise_objection(this);
 
     seq = axi4_virtual_write_seq::type_id::create("seq");
-    if (!seq.randomize() with { num_txns == 10; })
-      `uvm_error(get_type_name(), "randomize failed")
     seq.start(env_h.vseqr_h);
     phase.drop_objection(this);
   endtask

@@ -46,13 +46,17 @@ class cpu_tx extends uvm_sequence_item;
     if(pkt_type == WRITE_PKT)
       data.size() == ((len+1)*(1<<size));
 
-    if(pkt_type == READ_PKT)
+    if(pkt_type == READ_PKT){
+      size == 0;
+      len == 0;
       data.size() == 1;
+     }
   }
 
   constraint strobe_size_c
   {
-    strobe.size() == data.size();
+    if(pkt_type == WRITE_PKT) strobe.size() == data.size();
+    else strobe.size() == 4;
   }
 
   constraint read_pkt_c

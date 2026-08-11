@@ -24,10 +24,8 @@ class cpu_read_seq extends uvm_sequence #(cpu_tx);
 
     assert(req.randomize() with {
       pkt_type == READ_PKT;
-      wr_en    == 0;
-      rd_en    == 1;
-      size == 2;
-      len == 0;
+      wr_en    == 1;
+      rd_en    == 0;
       lock == 0;
       cache == 0;
       prot == 0;

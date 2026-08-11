@@ -1,11 +1,13 @@
 `uvm_analysis_imp_decl(_write)
 `uvm_analysis_imp_decl(_read)
-            
+`uvm_analysis_imp_decl(_axi_wr)
+
 class cpu_scoreboard extends uvm_scoreboard;
   `uvm_component_utils(cpu_scoreboard)
 
-  uvm_analysis_imp_write #(cpu_tx, cpu_scoreboard) write;
-  uvm_analysis_imp_read  #(cpu_tx, cpu_scoreboard) read;
+  uvm_analysis_imp_write  #(cpu_tx, cpu_scoreboard)      write;
+  uvm_analysis_imp_read   #(cpu_tx, cpu_scoreboard)      read;
+  uvm_analysis_imp_axi_wr #(axi4_slave_tx, cpu_scoreboard) axi_wr;   // NEW - from slave VIP monitor
 
   cpu_tx tx_h;
 
@@ -25,8 +27,44 @@ class cpu_scoreboard extends uvm_scoreboard;
 
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
-    write = new("write", this);
-    read  = new("read", this);
+    write  = new("write", this);
+    read   = new("read", this);
+    axi_wr = new("axi_wr", this);
+  endfunction
+
+  //-----------------------------------------------------------
+  // write_axi_wr(): NEW - called once per COMPLETE write burst
+  // observed on the AXI bus by the slave VIP's monitor
+  // (axi4_slave_mon_proxy_h.axi4_slave_write_data_analysis_port).
+  //
+  // This is the check that actually catches the beat_cnt/WVALID
+  // bug in AXI_MASTER_WRITE_CONTROL.v: if the master's write-data
+  // FSM undercounts beats (per-cycle beat_cnt decrementing on
+  // WREADY alone instead of WREADY && WVALID), the slave will have
+  // received fewer W beats than AWLEN+1 promised - t.wdata.size()
+  // will be short. That's directly checkable here without needing
+  // to look at internal RTL signals at all - purely from the bus.
+  //-----------------------------------------------------------
+  function void write_axi_wr(axi4_slave_tx t);
+    int expected_beats;
+    expected_beats = t.awlen + 1;
+
+    if (t.wdata.size() != expected_beats) begin
+      `uvm_error(get_type_name(),
+                 $sformatf("AXI W-CHANNEL BEAT COUNT MISMATCH: awaddr=0x%0h awid=%s awlen=%0d -> expected %0d W beats, slave received %0d (likely the beat_cnt/WVALID FSM bug in AXI_MASTER_WRITE_CONTROL.v)",
+                           t.awaddr, t.awid.name(), t.awlen, expected_beats, t.wdata.size()))
+    end else begin
+      `uvm_info(get_type_name(),
+                $sformatf("AXI W-CHANNEL beat count MATCH: awaddr=0x%0h awlen=%0d beats=%0d",
+                          t.awaddr, t.awlen, t.wdata.size()),
+                UVM_LOW)
+    end
+
+    if (t.wstrb.size() != expected_beats) begin
+      `uvm_error(get_type_name(),
+                 $sformatf("AXI W-CHANNEL WSTRB COUNT MISMATCH: awaddr=0x%0h expected %0d, got %0d",
+                           t.awaddr, expected_beats, t.wstrb.size()))
+    end
   endfunction
 
   function void write_write(cpu_tx t1);

@@ -9,6 +9,7 @@ class cpu_write_seq extends uvm_sequence #(cpu_tx);
   endfunction
 
   task body();
+    begin
 
     req = cpu_tx::type_id::create("req");
 
@@ -19,19 +20,22 @@ class cpu_write_seq extends uvm_sequence #(cpu_tx);
       wr_en == 1;
       rd_en == 0;
       size == 2;
-      len == 0;
+      len == 2;
       lock == 0;
       cache == 0;
       prot == 0;
       burst == 1;
       addr == 100;
+      txn_id == 1;
+      foreach (data[i]) data[i] == 8'b11111111;
       foreach (strobe[i]) strobe[i] == 1;
     });
-    $display("pkt_type=%s sop=0x%0h txn_id=0x%0h addr=0x%08h len=%0d size=%0d burst=%0d lock=%0d cache=%0d prot=%0d wr_en=%0b rd_en=%0b full=%0b empty=%0b wr_data=0x%032h rd_data=0x%032h eop=0x%0h data=%p strobe=%p",
+    $display("pkt_type=%s sop=0x%0h txn_id=0x%0h addr=0x%08h data = %p len=%0d size=%0d burst=%0d lock=%0d cache=%0d prot=%0d wr_en=%0b rd_en=%0b full=%0b empty=%0b wr_data=0x%032h rd_data=0x%032h eop=0x%0h data=%p strobe=%p",
          (req.pkt_type==WRITE_PKT)?"WRITE_PKT":"READ_PKT",
          req.sop,
          req.txn_id,
          req.addr,
+         req.data,
          req.len,
          req.size,
          req.burst,
@@ -48,7 +52,7 @@ class cpu_write_seq extends uvm_sequence #(cpu_tx);
          req.data,
          req.strobe);
     finish_item(req);
-
+    end
   endtask
 
 endclass

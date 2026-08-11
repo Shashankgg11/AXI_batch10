@@ -17,7 +17,6 @@ class cpu_driver extends uvm_driver #(cpu_tx);
     vif.wr_en   <= 1'b0;
     vif.wr_data <= '0;
     vif.rd_en   <= 1'b0;
-    #1000;
     forever begin
       seq_item_port.get_next_item(req);
       
@@ -37,16 +36,17 @@ class cpu_driver extends uvm_driver #(cpu_tx);
     if(!req.wr_en) return;
 
     create_pkt(req, fifo_words);
-
+    repeat(2)@(posedge vif.clk);
     foreach (fifo_words[i]) begin
       do begin
-        was_full    = vif.full;      // sample BEFORE the edge, at assertion time
+        was_full    = vif.full;      
         vif.wr_en   <= 1'b1;
         vif.wr_data <= fifo_words[i];
         $display($time,"my cpu driver wr_data = 0x%032h", fifo_words[i]);
         @(posedge vif.clk);
-      end while (was_full);           // retry THIS beat if it was rejected - don't
-                                       // silently move on and corrupt the packet
+      end while (was_full);  
+      
+      
     end
     vif.wr_en   <= 1'b0;
     vif.wr_data <= '0;
@@ -57,7 +57,7 @@ class cpu_driver extends uvm_driver #(cpu_tx);
     bit was_empty;
 
     if (!req.rd_en) return;
-
+    repeat(2)@(posedge vif.clk);
     do begin
       was_empty = vif.empty;
       vif.rd_en <= 1'b1;
@@ -67,9 +67,6 @@ class cpu_driver extends uvm_driver #(cpu_tx);
     vif.rd_en <= 1'b0;
   endtask
 
-  // Serialize tx into a queue of 128-bit FIFO words, MSB-first,
-  // zero-padded at the LSB end of the final word. Same convention
-  // as before - header(60) + strobe + data + eop, no pkt_flag bit.
   task create_pkt(cpu_tx tx, ref bit [127:0] fifo_words[$]);
     bit packet_bits[$];
     bit [127:0] temp;

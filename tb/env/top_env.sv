@@ -31,6 +31,12 @@ class top_env extends uvm_env;
     // can start a sequence on the slave side in parallel with the cpu side.
     vseqr_h.slave_write_sqr_h = axi_vip_env_h.slave_agt_h.axi4_slave_write_seqr_h;
     vseqr_h.slave_read_sqr_h  = axi_vip_env_h.slave_agt_h.axi4_slave_read_seqr_h;
+
+    // NEW: connect the slave VIP's monitor (what actually happened on the
+    // AXI bus) into the scoreboard, so it can catch bus-level protocol
+    // issues like the write-data beat-count bug - cpu_scoreboard previously
+    // only ever saw the CPU-side FIFO pins, never the AXI side.
+    axi_vip_env_h.slave_agt_h.axi4_slave_mon_proxy_h.axi4_slave_write_data_analysis_port.connect(cpu_env_h.sb_h.axi_wr);
   endfunction
 
 endclass

@@ -12,8 +12,8 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# vsim -novopt tb_top hdl_top "+UVM_TESTNAME=axi4_virtual_write_test" "+UVM_VERBOSITY=UVM_MEDIUM" 
-# Start time: 10:46:52 on Aug 06,2026
+# vsim -novopt tb_top hdl_top "+UVM_TESTNAME=axi4_virtual_write_read_test" "+UVM_VERBOSITY=UVM_MEDIUM" 
+# Start time: 12:34:27 on Aug 11,2026
 # ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
 # Refreshing /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10/work.tb_top
 # Refreshing /fetools/work_area/frontend/Batch_10/shashanka_G/verification/project/AXI_batch10/work.cpu_if
@@ -137,7 +137,7 @@ run -all
 # 
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
-# UVM_INFO @ 0: reporter [RNTST] Running test axi4_virtual_write_test...
+# UVM_INFO @ 0: reporter [RNTST] Running test axi4_virtual_write_read_test...
 # HDL_TOP
 # UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(84) @ 0: reporter [axi4 slave driver bfm] AXI4 SLAVE DRIVER BFM
 # UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_monitor_bfm.sv(82) @ 0: reporter [axi4 slave monitor bfm] AXI4 SLAVE MONITOR BFM
@@ -184,125 +184,127 @@ run -all
 # ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'ARLEN_256' in Coverpoint 'ARLEN_CP' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list. The bin will be taken out of coverage calculation.
 #    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
 # UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
-# ------------------------------------------------------------------------------------------
-# Name                                               Type                        Size  Value
-# ------------------------------------------------------------------------------------------
-# uvm_test_top                                       axi4_virtual_write_test     -     @469 
-#   env_h                                            top_env                     -     @488 
-#     axi_vip_env_h                                  axi_vip_env                 -     @502 
-#       slave_agt_h                                  axi4_slave_agent            -     @618 
-#         axi4_slave_cov_h                           axi4_slave_coverage         -     @1323
-#           analysis_imp                             uvm_analysis_imp            -     @1330
-#         axi4_slave_drv_proxy_h                     axi4_slave_driver_proxy     -     @628 
-#           axi4_slave_read_addr_fifo_h              uvm_tlm_fifo #(T)           -     @839 
-#             get_ap                                 uvm_analysis_port           -     @870 
-#             get_peek_export                        uvm_get_peek_imp            -     @854 
-#             put_ap                                 uvm_analysis_port           -     @862 
-#             put_export                             uvm_put_imp                 -     @846 
-#           axi4_slave_read_data_in_fifo_h           uvm_tlm_fifo #(T)           -     @878 
-#             get_ap                                 uvm_analysis_port           -     @909 
-#             get_peek_export                        uvm_get_peek_imp            -     @893 
-#             put_ap                                 uvm_analysis_port           -     @901 
-#             put_export                             uvm_put_imp                 -     @885 
-#           axi4_slave_write_addr_fifo_h             uvm_tlm_fifo #(T)           -     @683 
-#             get_ap                                 uvm_analysis_port           -     @714 
-#             get_peek_export                        uvm_get_peek_imp            -     @698 
-#             put_ap                                 uvm_analysis_port           -     @706 
-#             put_export                             uvm_put_imp                 -     @690 
-#           axi4_slave_write_data_in_fifo_h          uvm_tlm_fifo #(T)           -     @722 
-#             get_ap                                 uvm_analysis_port           -     @753 
-#             get_peek_export                        uvm_get_peek_imp            -     @737 
-#             put_ap                                 uvm_analysis_port           -     @745 
-#             put_export                             uvm_put_imp                 -     @729 
-#           axi4_slave_write_data_out_fifo_h         uvm_tlm_fifo #(T)           -     @800 
-#             get_ap                                 uvm_analysis_port           -     @831 
-#             get_peek_export                        uvm_get_peek_imp            -     @815 
-#             put_ap                                 uvm_analysis_port           -     @823 
-#             put_export                             uvm_put_imp                 -     @807 
-#           axi4_slave_write_response_fifo_h         uvm_tlm_fifo #(T)           -     @761 
-#             get_ap                                 uvm_analysis_port           -     @792 
-#             get_peek_export                        uvm_get_peek_imp            -     @776 
-#             put_ap                                 uvm_analysis_port           -     @784 
-#             put_export                             uvm_put_imp                 -     @768 
-#           axi_read_rsp_port                        uvm_analysis_port           -     @675 
-#           axi_read_seq_item_port                   uvm_seq_item_pull_port      -     @659 
-#           axi_write_rsp_port                       uvm_analysis_port           -     @667 
-#           axi_write_seq_item_port                  uvm_seq_item_pull_port      -     @651 
-#           rsp_port                                 uvm_analysis_port           -     @643 
-#           seq_item_port                            uvm_seq_item_pull_port      -     @635 
-#         axi4_slave_mon_proxy_h                     axi4_slave_monitor_proxy    -     @1135
-#           axi4_slave_read_address_analysis_port    uvm_analysis_port           -     @1142
-#           axi4_slave_read_data_analysis_port       uvm_analysis_port           -     @1150
-#           axi4_slave_read_fifo_h                   uvm_tlm_analysis_fifo #(T)  -     @1276
-#             analysis_export                        uvm_analysis_imp            -     @1315
-#             get_ap                                 uvm_analysis_port           -     @1307
-#             get_peek_export                        uvm_get_peek_imp            -     @1291
-#             put_ap                                 uvm_analysis_port           -     @1299
-#             put_export                             uvm_put_imp                 -     @1283
-#           axi4_slave_write_address_analysis_port   uvm_analysis_port           -     @1158
-#           axi4_slave_write_address_fifo_h          uvm_tlm_analysis_fifo #(T)  -     @1182
-#             analysis_export                        uvm_analysis_imp            -     @1221
-#             get_ap                                 uvm_analysis_port           -     @1213
-#             get_peek_export                        uvm_get_peek_imp            -     @1197
-#             put_ap                                 uvm_analysis_port           -     @1205
-#             put_export                             uvm_put_imp                 -     @1189
-#           axi4_slave_write_data_analysis_port      uvm_analysis_port           -     @1166
-#           axi4_slave_write_data_fifo_h             uvm_tlm_analysis_fifo #(T)  -     @1229
-#             analysis_export                        uvm_analysis_imp            -     @1268
-#             get_ap                                 uvm_analysis_port           -     @1260
-#             get_peek_export                        uvm_get_peek_imp            -     @1244
-#             put_ap                                 uvm_analysis_port           -     @1252
-#             put_export                             uvm_put_imp                 -     @1236
-#           axi4_slave_write_response_analysis_port  uvm_analysis_port           -     @1174
-#         axi4_slave_read_seqr_h                     axi4_slave_read_sequencer   -     @1026
-#           rsp_export                               uvm_analysis_export         -     @1033
-#           seq_item_export                          uvm_seq_item_pull_imp       -     @1127
-#           arbitration_queue                        array                       0     -    
-#           lock_queue                               array                       0     -    
-#           num_last_reqs                            integral                    32    'd1  
-#           num_last_rsps                            integral                    32    'd1  
-#         axi4_slave_write_seqr_h                    axi4_slave_write_sequencer  -     @917 
-#           rsp_export                               uvm_analysis_export         -     @924 
-#           seq_item_export                          uvm_seq_item_pull_imp       -     @1018
-#           arbitration_queue                        array                       0     -    
-#           lock_queue                               array                       0     -    
-#           num_last_reqs                            integral                    32    'd1  
-#           num_last_rsps                            integral                    32    'd1  
-#     cpu_env_h                                      cpu_env                     -     @495 
-#       cpu_agt_h                                    cpu_agent                   -     @1350
-#         cpu_drv_h                                  cpu_driver                  -     @1474
-#           rsp_port                                 uvm_analysis_port           -     @1489
-#           seq_item_port                            uvm_seq_item_pull_port      -     @1481
-#         cpu_mon_h                                  cpu_monitor                 -     @1497
-#           rd_ap                                    uvm_analysis_port           -     @1512
-#           wr_ap                                    uvm_analysis_port           -     @1504
-#         cpu_seqr_h                                 cpu_sequencer               -     @1365
-#           rsp_export                               uvm_analysis_export         -     @1372
-#           seq_item_export                          uvm_seq_item_pull_imp       -     @1466
-#           arbitration_queue                        array                       0     -    
-#           lock_queue                               array                       0     -    
-#           num_last_reqs                            integral                    32    'd1  
-#           num_last_rsps                            integral                    32    'd1  
-#       sb_h                                         cpu_scoreboard              -     @1357
-#         read                                       uvm_analysis_imp_read       -     @1535
-#         write                                      uvm_analysis_imp_write      -     @1527
-#     vseqr_h                                        top_vseqr                   -     @509 
-#       rsp_export                                   uvm_analysis_export         -     @516 
-#       seq_item_export                              uvm_seq_item_pull_imp       -     @610 
-#       arbitration_queue                            array                       0     -    
-#       lock_queue                                   array                       0     -    
-#       num_last_reqs                                integral                    32    'd1  
-#       num_last_rsps                                integral                    32    'd1  
-# ------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------
+# Name                                               Type                          Size  Value
+# --------------------------------------------------------------------------------------------
+# uvm_test_top                                       axi4_virtual_write_read_test  -     @469 
+#   env_h                                            top_env                       -     @488 
+#     axi_vip_env_h                                  axi_vip_env                   -     @502 
+#       slave_agt_h                                  axi4_slave_agent              -     @618 
+#         axi4_slave_cov_h                           axi4_slave_coverage           -     @1323
+#           analysis_imp                             uvm_analysis_imp              -     @1330
+#         axi4_slave_drv_proxy_h                     axi4_slave_driver_proxy       -     @628 
+#           axi4_slave_read_addr_fifo_h              uvm_tlm_fifo #(T)             -     @839 
+#             get_ap                                 uvm_analysis_port             -     @870 
+#             get_peek_export                        uvm_get_peek_imp              -     @854 
+#             put_ap                                 uvm_analysis_port             -     @862 
+#             put_export                             uvm_put_imp                   -     @846 
+#           axi4_slave_read_data_in_fifo_h           uvm_tlm_fifo #(T)             -     @878 
+#             get_ap                                 uvm_analysis_port             -     @909 
+#             get_peek_export                        uvm_get_peek_imp              -     @893 
+#             put_ap                                 uvm_analysis_port             -     @901 
+#             put_export                             uvm_put_imp                   -     @885 
+#           axi4_slave_write_addr_fifo_h             uvm_tlm_fifo #(T)             -     @683 
+#             get_ap                                 uvm_analysis_port             -     @714 
+#             get_peek_export                        uvm_get_peek_imp              -     @698 
+#             put_ap                                 uvm_analysis_port             -     @706 
+#             put_export                             uvm_put_imp                   -     @690 
+#           axi4_slave_write_data_in_fifo_h          uvm_tlm_fifo #(T)             -     @722 
+#             get_ap                                 uvm_analysis_port             -     @753 
+#             get_peek_export                        uvm_get_peek_imp              -     @737 
+#             put_ap                                 uvm_analysis_port             -     @745 
+#             put_export                             uvm_put_imp                   -     @729 
+#           axi4_slave_write_data_out_fifo_h         uvm_tlm_fifo #(T)             -     @800 
+#             get_ap                                 uvm_analysis_port             -     @831 
+#             get_peek_export                        uvm_get_peek_imp              -     @815 
+#             put_ap                                 uvm_analysis_port             -     @823 
+#             put_export                             uvm_put_imp                   -     @807 
+#           axi4_slave_write_response_fifo_h         uvm_tlm_fifo #(T)             -     @761 
+#             get_ap                                 uvm_analysis_port             -     @792 
+#             get_peek_export                        uvm_get_peek_imp              -     @776 
+#             put_ap                                 uvm_analysis_port             -     @784 
+#             put_export                             uvm_put_imp                   -     @768 
+#           axi_read_rsp_port                        uvm_analysis_port             -     @675 
+#           axi_read_seq_item_port                   uvm_seq_item_pull_port        -     @659 
+#           axi_write_rsp_port                       uvm_analysis_port             -     @667 
+#           axi_write_seq_item_port                  uvm_seq_item_pull_port        -     @651 
+#           rsp_port                                 uvm_analysis_port             -     @643 
+#           seq_item_port                            uvm_seq_item_pull_port        -     @635 
+#         axi4_slave_mon_proxy_h                     axi4_slave_monitor_proxy      -     @1135
+#           axi4_slave_read_address_analysis_port    uvm_analysis_port             -     @1142
+#           axi4_slave_read_data_analysis_port       uvm_analysis_port             -     @1150
+#           axi4_slave_read_fifo_h                   uvm_tlm_analysis_fifo #(T)    -     @1276
+#             analysis_export                        uvm_analysis_imp              -     @1315
+#             get_ap                                 uvm_analysis_port             -     @1307
+#             get_peek_export                        uvm_get_peek_imp              -     @1291
+#             put_ap                                 uvm_analysis_port             -     @1299
+#             put_export                             uvm_put_imp                   -     @1283
+#           axi4_slave_write_address_analysis_port   uvm_analysis_port             -     @1158
+#           axi4_slave_write_address_fifo_h          uvm_tlm_analysis_fifo #(T)    -     @1182
+#             analysis_export                        uvm_analysis_imp              -     @1221
+#             get_ap                                 uvm_analysis_port             -     @1213
+#             get_peek_export                        uvm_get_peek_imp              -     @1197
+#             put_ap                                 uvm_analysis_port             -     @1205
+#             put_export                             uvm_put_imp                   -     @1189
+#           axi4_slave_write_data_analysis_port      uvm_analysis_port             -     @1166
+#           axi4_slave_write_data_fifo_h             uvm_tlm_analysis_fifo #(T)    -     @1229
+#             analysis_export                        uvm_analysis_imp              -     @1268
+#             get_ap                                 uvm_analysis_port             -     @1260
+#             get_peek_export                        uvm_get_peek_imp              -     @1244
+#             put_ap                                 uvm_analysis_port             -     @1252
+#             put_export                             uvm_put_imp                   -     @1236
+#           axi4_slave_write_response_analysis_port  uvm_analysis_port             -     @1174
+#         axi4_slave_read_seqr_h                     axi4_slave_read_sequencer     -     @1026
+#           rsp_export                               uvm_analysis_export           -     @1033
+#           seq_item_export                          uvm_seq_item_pull_imp         -     @1127
+#           arbitration_queue                        array                         0     -    
+#           lock_queue                               array                         0     -    
+#           num_last_reqs                            integral                      32    'd1  
+#           num_last_rsps                            integral                      32    'd1  
+#         axi4_slave_write_seqr_h                    axi4_slave_write_sequencer    -     @917 
+#           rsp_export                               uvm_analysis_export           -     @924 
+#           seq_item_export                          uvm_seq_item_pull_imp         -     @1018
+#           arbitration_queue                        array                         0     -    
+#           lock_queue                               array                         0     -    
+#           num_last_reqs                            integral                      32    'd1  
+#           num_last_rsps                            integral                      32    'd1  
+#     cpu_env_h                                      cpu_env                       -     @495 
+#       cpu_agt_h                                    cpu_agent                     -     @1350
+#         cpu_drv_h                                  cpu_driver                    -     @1474
+#           rsp_port                                 uvm_analysis_port             -     @1489
+#           seq_item_port                            uvm_seq_item_pull_port        -     @1481
+#         cpu_mon_h                                  cpu_monitor                   -     @1497
+#           rd_ap                                    uvm_analysis_port             -     @1512
+#           wr_ap                                    uvm_analysis_port             -     @1504
+#         cpu_seqr_h                                 cpu_sequencer                 -     @1365
+#           rsp_export                               uvm_analysis_export           -     @1372
+#           seq_item_export                          uvm_seq_item_pull_imp         -     @1466
+#           arbitration_queue                        array                         0     -    
+#           lock_queue                               array                         0     -    
+#           num_last_reqs                            integral                      32    'd1  
+#           num_last_rsps                            integral                      32    'd1  
+#       sb_h                                         cpu_scoreboard                -     @1357
+#         axi_wr                                     uvm_analysis_imp_axi_wr       -     @1543
+#         read                                       uvm_analysis_imp_read         -     @1535
+#         write                                      uvm_analysis_imp_write        -     @1527
+#     vseqr_h                                        top_vseqr                     -     @509 
+#       rsp_export                                   uvm_analysis_export           -     @516 
+#       seq_item_export                              uvm_seq_item_pull_imp         -     @610 
+#       arbitration_queue                            array                         0     -    
+#       lock_queue                                   array                         0     -    
+#       num_last_reqs                                integral                      32    'd1  
+#       num_last_rsps                                integral                      32    'd1  
+# --------------------------------------------------------------------------------------------
 # 
-# UVM_ERROR tb/test/axi4_virtual_write_test.sv(21) @ 0: uvm_test_top [axi4_virtual_write_test] randomize failed
 # UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(141) @ 0: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [axi4_slave_driver_proxy] SLAVE_DRIVER_PROXY
+# pkt_type=WRITE_PKT sop=0xaa txn_id=0x1 addr=0x00000064 data = '{255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255} len=2 size=2 burst=1 lock=0 cache=0 prot=0 wr_en=1 rd_en=0 full=0 empty=0 wr_data=0x00000000000000000000000000000000 rd_data=0x00000000000000000000000000000000 eop=0x53 data='{255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255} strobe='{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
 # UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(111) @ 10000: reporter [AXI4_SLAVE_DRIVER_BFM] SYSTEM RESET ACTIVATED
+#                   30my cpu driver wr_data = 0xaa1000000642480fffffffffffffffff
 # UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(126) @ 30000: reporter [AXI4_SLAVE_DRIVER_BFM] SYSTEM RESET DE-ACTIVATED
 # ----------------------------------------------------------------------------
 # Name                 Type           Size  Value                             
 # ----------------------------------------------------------------------------
-# req                  axi4_slave_tx  -     @1575                             
+# req                  axi4_slave_tx  -     @1583                             
 #   tx_type            string         4     READ                              
 #   arid               string         7     ARID_10                           
 #   araddr             integral       32    'hb16f568a                        
@@ -320,19 +322,23 @@ run -all
 #   no_of_wait_states  integral       32    'h2                               
 # ----------------------------------------------------------------------------
 # UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(192) @ 30000: reporter [AXI4_SLAVE_DRIVER_BFM] INSIDE WRITE DATA CHANNEL
+#                   50my cpu driver wr_data = 0xffffffffff5300000000000000000000
+# cpu scoreboard request received full=0 wr_data=0xaa1000000642480fffffffffffffffff fifo_size=0
+# UVM_INFO tb/cpu_agent/cpu_monitor.sv(43) @ 50000: uvm_test_top.env_h.cpu_env_h.cpu_agt_h.cpu_mon_h [cpu_monitor] WRITE: wr_en=1 full=0 wr_data=aa1000000642480fffffffffffffffff
 # UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(136) @ 50000: reporter [AXI4_SLAVE_DRIVER_BFM] INSIDE WRITE_ADDRESS_PHASE
-# pkt_type=WRITE_PKT sop=0xaa txn_id=0x4 addr=0x00000064 len=0 size=2 burst=1 lock=0 cache=0 prot=0 wr_en=1 rd_en=0 full=0 empty=0 wr_data=0x00000000000000000000000000000000 rd_data=0x00000000000000000000000000000000 eop=0x53 data='{69, 81, 113, 176} strobe='{1, 1, 1, 1}
-#                 1000my cpu driver wr_data = 0xaa4000000640480f455171b053000000
-# cpu scoreboard request received full=0 wr_data=0xaa4000000640480f455171b053000000 fifo_size=0
-# UVM_INFO tb/cpu_agent/cpu_monitor.sv(43) @ 1010000: uvm_test_top.env_h.cpu_env_h.cpu_agt_h.cpu_mon_h [cpu_monitor] WRITE: wr_en=1 full=0 wr_data=aa4000000640480f455171b053000000
-# popped request = 0xaa4000000640480f455171b053000000
-# pushing write response = 0x00000000000000000000000000aa0153
-# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(147) @ 1130000: reporter [SLAVE_DRIVER_WADDR_PHASE] outside of awvalid
-# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(215) @ 1170000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [DEBUG_SLAVE_WRITE_ADDR_PROXY] AFTER :: Received req packet 
+# popped request = 0xaa1000000642480fffffffffffffffff
+# pushing write response = 0x00000000000000000000000000aaf153
+# cpu scoreboard request received full=0 wr_data=0xffffffffff5300000000000000000000 fifo_size=0
+# UVM_INFO tb/cpu_agent/cpu_monitor.sv(43) @ 70000: uvm_test_top.env_h.cpu_env_h.cpu_agt_h.cpu_mon_h [cpu_monitor] WRITE: wr_en=1 full=0 wr_data=ffffffffff5300000000000000000000
+# popped request = 0xffffffffff5300000000000000000000
+# ** Warning: (vsim-3829) tb/env/cpu_scoreboard.sv(128): Non-existent associative array entry. Returning default value.
+# pushing read response = 0x000000000000000000aa000000000153
+# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(147) @ 170000: reporter [SLAVE_DRIVER_WADDR_PHASE] outside of awvalid
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(215) @ 210000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [DEBUG_SLAVE_WRITE_ADDR_PROXY] AFTER :: Received req packet 
 #  ------------------------------------------------------------
 # Name           Type           Size  Value                   
 # ------------------------------------------------------------
-# axi4_slave_tx  axi4_slave_tx  -     @1680                   
+# axi4_slave_tx  axi4_slave_tx  -     @1692                   
 #   tx_type      string         5     WRITE                   
 #   awid         string         6     AWID_0                  
 #   awaddr       integral       32    'h0                     
@@ -350,50 +356,32 @@ run -all
 #   buser        integral       4     'd0                     
 # ------------------------------------------------------------
 # 
-# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(393) @ 1170000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_ADDRESS_CHANNEL_STATUS =
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(393) @ 210000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_ADDRESS_CHANNEL_STATUS =
 #  FINISHED
-# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(394) @ 1170000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_WDATA_CHANNEL_STATUS = 
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(394) @ 210000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_WDATA_CHANNEL_STATUS = 
 #  WAITING
-# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(395) @ 1170000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_WRESP_CHANNEL_STATUS = 
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(395) @ 210000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_WRESP_CHANNEL_STATUS = 
 # WAITING
-# -----------------------------------------------------------------
-# Name                 Type           Size  Value                  
-# -----------------------------------------------------------------
-# req                  axi4_slave_tx  -     @1689                  
-#   tx_type            string         4     READ                   
-#   arid               string         7     ARID_13                
-#   araddr             integral       32    'h7b1a92d              
-#   arlen              integral       3     'd1                    
-#   arsize             string         13    READ_16_BYTES          
-#   arburst            string         9     READ_INCR              
-#   arlock             string         21    READ_EXCLUSIVE_ACCESS  
-#   arcache            string         15    READ_MODIFIABLE        
-#   arprot             string         23    READ_NORMAL_SECURE_DATA
-#   arqos              integral       1     'h0                    
-#   rid                string         5     RID_2                  
-#   rdata[0]           integral       32    'hf0294912             
-#   rdata[1]           integral       32    'h7132e302             
-#   rresp              string         9     READ_OKAY              
-#   ruser              integral       4     'h6                    
-#   no_of_wait_states  integral       32    'h3                    
-# -----------------------------------------------------------------
-# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(136) @ 1190000: reporter [AXI4_SLAVE_DRIVER_BFM] INSIDE WRITE_ADDRESS_PHASE
-# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(147) @ 1210000: reporter [SLAVE_DRIVER_WADDR_PHASE] outside of awvalid
-# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(215) @ 1270000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [DEBUG_SLAVE_WRITE_ADDR_PROXY] AFTER :: Received req packet 
+# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(200) @ 270000: reporter [SLAVE_DRIVER_WRITE_DATA_PHASE] outside of wvalid
+# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(214) @ 330000: reporter [SLAVE_DEBUG] mem_length = 0
+# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(238) @ 350000: reporter [AXI4_SLAVE_DRIVER_BFM] OUTSIDE WRITE DATA CHANNEL
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(260) @ 370000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [DEBUG_SLAVE_WDATA_PROXY_TO_CLASS] AFTER TO CLASS :: Received req packet 
 #  ------------------------------------------------------------
 # Name           Type           Size  Value                   
 # ------------------------------------------------------------
-# axi4_slave_tx  axi4_slave_tx  -     @1701                   
+# axi4_slave_tx  axi4_slave_tx  -     @1713                   
 #   tx_type      string         5     WRITE                   
-#   awid         string         6     AWID_4                  
-#   awaddr       integral       32    'h64                    
+#   awid         string         6     AWID_0                  
+#   awaddr       integral       32    'h0                     
 #   awlen        integral       3     'd0                     
-#   awsize       string         13    WRITE_4_BYTES           
-#   awburst      string         10    WRITE_INCR              
+#   awsize       string         12    WRITE_1_BYTE            
+#   awburst      string         11    WRITE_FIXED             
 #   awlock       string         19    WRITE_NORMAL_ACCESS     
 #   awcache      string         16    WRITE_BUFFERABLE        
 #   awprot       string         24    WRITE_NORMAL_SECURE_DATA
 #   awqos        integral       1     'h0                     
+#   wdata[0]     integral       32    'hffffffff              
+#   wstrb[0]     integral       4     'hf                     
 #   wlast        integral       1     'd0                     
 #   wuser        integral       4     'd0                     
 #   bid          string         5     BID_0                   
@@ -401,51 +389,94 @@ run -all
 #   buser        integral       4     'd0                     
 # ------------------------------------------------------------
 # 
-# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(393) @ 1270000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_ADDRESS_CHANNEL_STATUS =
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(308) @ 370000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [DEBUG_FIFO] fifo_used =0
+# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(267) @ 390000: reporter [AXI4_SLAVE_DRIVER_BFM] INSIDE WRITE_RESPONSE_PHASE
+# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(271) @ 390000: reporter [DEBUG_BRESP_WLAST] wlast = 0,j=0
+# pkt_type= READ_PKT sop=0xaa txn_id=0xf addr=0x00000064 len=0 size=0 burst=1 lock=0 cache=0 prot=0 wr_en=1 rd_en=0 full=0 empty=0 wr_data=0x00000000000000000000000000000000 rd_data=0x00000000000000000000000000000000 eop=0x53 data='{0} strobe='{0, 0, 0, 0}
+#                 1110my cpu driver wr_data = 0xaaf00000064008000053000000000000
+# cpu scoreboard request received full=0 wr_data=0xaaf00000064008000053000000000000 fifo_size=0
+# UVM_INFO tb/cpu_agent/cpu_monitor.sv(43) @ 1130000: uvm_test_top.env_h.cpu_env_h.cpu_agt_h.cpu_mon_h [cpu_monitor] WRITE: wr_en=1 full=0 wr_data=aaf00000064008000053000000000000
+# popped request = 0xaaf00000064008000053000000000000
+# pushing write response = 0x00000000000000000000000000aa0153
+# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(317) @ 1270000: reporter [SLAVE_DRIVER_RADDR_PHASE] outside of arvalid
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(464) @ 1290000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [DEBUG_SLAVE_READ_ADDR_PROXY]  to_class_raddr_phase_slave_proxy  
+#  '{arid:15, araddr:100, arlen:0, arsize:0, arburst:1, arcache:0, arprot:0, arqos:0, arregion:0, aruser:0, arlock:1, rid:0, rdata:'{0, 0, 0, 0, 0, 0, 0, 2740334234, 2760857111}, rresp:'{0, 0, 0, 0, 0, 0, 0, 0, 0}, ruser:'{0, 0, 0, 0, 0, 0, 0, 0, 0}, rlast:0, rvalid:0, tx_type:0, wait_count_read_address_channel:0, wait_count_read_data_channel:0, outstanding_read_tx:0, no_of_wait_states:0}
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(468) @ 1290000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [DEBUG_SLAVE_READ_ADDR_PROXY] AFTER :: Received req packet 
+#  -----------------------------------------------------------------
+# Name                 Type           Size  Value                  
+# -----------------------------------------------------------------
+# axi4_slave_tx        axi4_slave_tx  -     @1738                  
+#   tx_type            string         4     READ                   
+#   arid               string         7     ARID_15                
+#   araddr             integral       32    'h64                   
+#   arlen              integral       3     'd0                    
+#   arsize             string         11    READ_1_BYTE            
+#   arburst            string         9     READ_INCR              
+#   arlock             string         21    READ_EXCLUSIVE_ACCESS  
+#   arcache            string         15    READ_BUFFERABLE        
+#   arprot             string         23    READ_NORMAL_SECURE_DATA
+#   arqos              integral       1     'h0                    
+#   rid                string         5     RID_0                  
+#   rdata[0]           integral       32    'ha48f5617             
+#   rdata[1]           integral       32    'ha3562e9a             
+#   rresp              string         9     READ_OKAY              
+#   ruser              integral       4     'h0                    
+#   no_of_wait_states  integral       32    'h0                    
+# -----------------------------------------------------------------
+# 
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(610) @ 1290000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_READ_CHANNEL_STATUS = 
 #  FINISHED
-# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(394) @ 1270000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_WDATA_CHANNEL_STATUS = 
-#  WAITING
-# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(395) @ 1270000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_WRESP_CHANNEL_STATUS = 
-# WAITING
-# -------------------------------------------------------------------------------
-# Name                 Type           Size  Value                                
-# -------------------------------------------------------------------------------
-# req                  axi4_slave_tx  -     @1709                                
-#   tx_type            string         4     READ                                 
-#   arid               string         6     ARID_4                               
-#   araddr             integral       32    'hbd944d89                           
-#   arlen              integral       3     'd0                                  
-#   arsize             string         11    READ_1_BYTE                          
-#   arburst            string         10    READ_FIXED                           
-#   arlock             string         18    READ_NORMAL_ACCESS                   
-#   arcache            string         15    READ_MODIFIABLE                      
-#   arprot             string         37    READ_PRIVILEGED_NONSECURE_INSTRUCTION
-#   arqos              integral       1     'h0                                  
-#   rid                string         5     RID_5                                
-#   rdata[0]           integral       32    'h12d0fd05                           
-#   rresp              string         9     READ_OKAY                            
-#   ruser              integral       4     'h5                                  
-#   no_of_wait_states  integral       32    'h2                                  
-# -------------------------------------------------------------------------------
-# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(136) @ 1290000: reporter [AXI4_SLAVE_DRIVER_BFM] INSIDE WRITE_ADDRESS_PHASE
-# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 2010000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO vip/axi_slave_vip/axi4_slave_coverage.sv(231) @ 2010000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_cov_h [axi4_slave_coverage] AXI4 Slave Agent Coverage = 16.96 %
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(611) @ 1290000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_RDATA_CHANNEL_STATUS = 
+#  RUNNING
+# RDATA_INDSDE:17
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(601) @ 1330000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [DEBUG_SLAVE_RDATA_PROXY] AFTER :: COMBINED READ CHANNEL PACKET 
+# -----------------------------------------------------------------
+# Name                 Type           Size  Value                  
+# -----------------------------------------------------------------
+# axi4_slave_tx        axi4_slave_tx  -     @1767                  
+#   tx_type            string         4     READ                   
+#   arid               string         7     ARID_15                
+#   araddr             integral       32    'h64                   
+#   arlen              integral       3     'd0                    
+#   arsize             string         11    READ_1_BYTE            
+#   arburst            string         9     READ_INCR              
+#   arlock             string         21    READ_EXCLUSIVE_ACCESS  
+#   arcache            string         15    READ_BUFFERABLE        
+#   arprot             string         23    READ_NORMAL_SECURE_DATA
+#   arqos              integral       1     'h0                    
+#   rid                string         6     RID_15                 
+#   rdata[0]           integral       32    'h17                   
+#   rresp              string         9     READ_OKAY              
+#   ruser              integral       4     'h0                    
+#   no_of_wait_states  integral       32    'h0                    
+# -----------------------------------------------------------------
+# 
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 3130000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO vip/axi_slave_vip/axi4_slave_coverage.sv(231) @ 3130000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_cov_h [axi4_slave_coverage] AXI4 Slave Agent Coverage = 20.96 %
 # 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :   28
+# UVM_INFO :   36
 # UVM_WARNING :    0
-# UVM_ERROR :    1
+# UVM_ERROR :    0
 # UVM_FATAL :    0
 # ** Report counts by id
 # [AXI4_SLAVE_DRIVER_BFM]     6
-# [DEBUG_SLAVE_WRITE_ADDR_PROXY]     2
+# [DEBUG_BRESP_WLAST]     1
+# [DEBUG_FIFO]     1
+# [DEBUG_SLAVE_RDATA_PROXY]     1
+# [DEBUG_SLAVE_READ_ADDR_PROXY]     2
+# [DEBUG_SLAVE_WDATA_PROXY_TO_CLASS]     1
+# [DEBUG_SLAVE_WRITE_ADDR_PROXY]     1
 # [Questa UVM]     2
 # [RNTST]     1
 # [SLAVE_ASSERTIONS]     1
-# [SLAVE_DRIVER_WADDR_PHASE]     2
-# [SLAVE_STATUS_CHECK]     6
+# [SLAVE_DEBUG]     1
+# [SLAVE_DRIVER_RADDR_PHASE]     1
+# [SLAVE_DRIVER_WADDR_PHASE]     1
+# [SLAVE_DRIVER_WRITE_DATA_PHASE]     1
+# [SLAVE_STATUS_CHECK]     5
 # [TEST_DONE]     1
 # [UVMTOP]     1
 # [axi4 slave agent bfm]     1
@@ -453,11 +484,10 @@ run -all
 # [axi4 slave monitor bfm]     1
 # [axi4_slave_coverage]     1
 # [axi4_slave_driver_proxy]     1
-# [axi4_virtual_write_test]     1
-# [cpu_monitor]     1
+# [cpu_monitor]     3
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
-#    Time: 2010 ns  Iteration: 59  Instance: /tb_top
+#    Time: 3130 ns  Iteration: 54  Instance: /tb_top
 # 1
 # Break in Task uvm_pkg/uvm_root::run_test at /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
-# End time: 10:51:58 on Aug 06,2026, Elapsed time: 0:05:06
-# Errors: 0, Warnings: 48
+# End time: 12:38:47 on Aug 11,2026, Elapsed time: 0:04:20
+# Errors: 0, Warnings: 49

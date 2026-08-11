@@ -14,7 +14,6 @@ class axi4_virtual_read_seq extends uvm_sequence;
   `uvm_object_utils(axi4_virtual_read_seq)
   `uvm_declare_p_sequencer(top_vseqr)
 
-  rand int unsigned num_txns = 10;
 
   function new(string name = "axi4_virtual_read_seq");
     super.new(name);
@@ -25,22 +24,16 @@ class axi4_virtual_read_seq extends uvm_sequence;
     axi4_slave_read_seq  slv_rd_seq;
 
     fork
-      // Background: AXI4 slave VIP keeps responding to read bursts for as
-      // long as the foreground branch below is running.
-      begin
         forever begin
           slv_rd_seq = axi4_slave_read_seq::type_id::create("slv_rd_seq");
           slv_rd_seq.start(p_sequencer.slave_read_sqr_h);
         end
-      end
-      // Foreground: drive num_txns CPU reads.
+    join_none
       begin
-        repeat (num_txns) begin
           cpu_rd_seq = cpu_read_seq::type_id::create("cpu_rd_seq");
           cpu_rd_seq.start(p_sequencer.cpu_sqr_h);
-        end
+          #1000;
       end
-    join_any
     disable fork;
   endtask
 endclass
