@@ -17,6 +17,7 @@ class cpu_driver extends uvm_driver #(cpu_tx);
     vif.wr_en   <= 1'b0;
     vif.wr_data <= '0;
     vif.rd_en   <= 1'b0;
+    repeat(2)@(posedge vif.clk);
     forever begin
       seq_item_port.get_next_item(req);
       
@@ -31,23 +32,18 @@ class cpu_driver extends uvm_driver #(cpu_tx);
 
   task write(cpu_tx req);
     bit[127:0] fifo_words[$];
-    bit was_full;
 
     if(!req.wr_en) return;
 
     create_pkt(req, fifo_words);
-    repeat(2)@(posedge vif.clk);
-    foreach (fifo_words[i]) begin
-      do begin
-        was_full    = vif.full;      
-        vif.wr_en   <= 1'b1;
+    //repeat(2)@(posedge vif.clk);
+    foreach(fifo_words[i])begin      
+        vif.wr_en <= 1'b1;
         vif.wr_data <= fifo_words[i];
         $display($time,"my cpu driver wr_data = 0x%032h", fifo_words[i]);
         @(posedge vif.clk);
-      end while (was_full);  
-      
-      
     end
+      
     vif.wr_en   <= 1'b0;
     vif.wr_data <= '0;
   endtask
@@ -57,7 +53,7 @@ class cpu_driver extends uvm_driver #(cpu_tx);
     bit was_empty;
 
     if (!req.rd_en) return;
-    repeat(2)@(posedge vif.clk);
+    //repeat(2)@(posedge vif.clk);
     do begin
       was_empty = vif.empty;
       vif.rd_en <= 1'b1;

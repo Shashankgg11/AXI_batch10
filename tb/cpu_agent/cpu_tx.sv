@@ -35,6 +35,8 @@ class cpu_tx extends uvm_sequence_item;
   constraint sop_c{sop == 8'hAA;}
   constraint eop_c{eop == 8'h53;}
 
+  constraint sb{solve len, size before data;}
+
   constraint burst_c{burst inside {0,1,2};}
 
   constraint size_c{size inside {[0:4]};}
