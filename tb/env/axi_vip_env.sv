@@ -1,21 +1,3 @@
-//--------------------------------------------------------------------------------------------
-// Class: axi_vip_env
-// NEW FILE. Thin wrapper around ONLY axi4_slave_agent from the vendor's
-// axi4_slave_pkg - per your instruction to use the slave VIP only (no master
-// agent instantiated, since Top_Module_AXI4 is now the real AXI4 master).
-//
-// axi4_slave_agent_bfm (in hdl_top.sv) already publishes its virtual interface
-// via config_db globally ("*"), so axi4_slave_driver_proxy/monitor_proxy inside
-// axi4_slave_agent find it automatically - no extra config_db wiring needed here.
-//
-// NOTE on config timing: axi4_slave_agent's OWN build_phase constructs a fresh
-// default axi4_slave_agent_cfg_h (is_active defaults to UVM_ACTIVE already, which
-// is what we want). min_address/max_address/response mode are only consumed at
-// RUN time by the driver proxy, so it's safe to set them here in
-// end_of_elaboration_phase (after the whole tree has built) by reaching directly
-// into slave_agt_h.axi4_slave_agent_cfg_h - these are handle/reference fields,
-// so setting them here is visible everywhere that already holds that handle.
-//--------------------------------------------------------------------------------------------
 class axi_vip_env extends uvm_env;
 
   `uvm_component_utils(axi_vip_env)

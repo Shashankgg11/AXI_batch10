@@ -71,11 +71,7 @@ class cpu_scoreboard extends uvm_scoreboard;
     end
   endfunction
 
-  //-----------------------------------------------------------
-  // write_axi_waddr(): NEW - AW channel sanity check.
-  // Pushes into aw_pending_q so write_axi_wresp() can correlate
-  // each B response back to the AW that requested it.
-  //-----------------------------------------------------------
+
   function void write_axi_waddr(axi4_slave_tx t);
     if (!(t.awaddr inside {[0 : (2**ADDRESS_WIDTH)-1]})) begin
       `uvm_error(get_type_name(),
@@ -84,11 +80,7 @@ class cpu_scoreboard extends uvm_scoreboard;
     aw_pending_q.push_back(t);
   endfunction
 
-  //-----------------------------------------------------------
-  // write_axi_wresp(): NEW - B channel check.
-  // Confirms every AW eventually gets exactly one matching B
-  // response, with the right ID.
-  //-----------------------------------------------------------
+
   function void write_axi_wresp(axi4_slave_tx t);
     axi4_slave_tx exp_aw;
 
@@ -113,9 +105,7 @@ class cpu_scoreboard extends uvm_scoreboard;
     end
   endfunction
 
-  //-----------------------------------------------------------
-  // write_axi_raddr(): NEW - AR channel sanity check.
-  //-----------------------------------------------------------
+
   function void write_axi_raddr(axi4_slave_tx t);
     if (!(t.araddr inside {[0 : (2**ADDRESS_WIDTH)-1]})) begin
       `uvm_error(get_type_name(),
@@ -124,10 +114,7 @@ class cpu_scoreboard extends uvm_scoreboard;
     ar_pending_q.push_back(t);
   endfunction
 
-  //-----------------------------------------------------------
-  // write_axi_rdata(): NEW - R channel check.
-  // Confirms beat count == ARLEN+1 and ID matches.
-  //-----------------------------------------------------------
+
   function void write_axi_rdata(axi4_slave_tx t);
     axi4_slave_tx exp_ar;
     int expected_beats;

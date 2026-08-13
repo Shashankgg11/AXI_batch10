@@ -1,8 +1,3 @@
-//--------------------------------------------------------------------------------------------
-// Class: single_seq_test
-// Minimal test for running exactly ONE cpu_write_seq item - bypasses top_vseq
-// entirely, starts directly on the cpu sequencer.
-//--------------------------------------------------------------------------------------------
 class single_seq_test extends base_test;
 
   `uvm_component_utils(single_seq_test)

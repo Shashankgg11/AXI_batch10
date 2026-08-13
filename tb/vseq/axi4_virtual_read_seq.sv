@@ -1,15 +1,4 @@
-//--------------------------------------------------------------------------------------------
-// Class: axi4_virtual_read_seq
-// NEW FILE. Read-side counterpart of axi4_virtual_write_seq - see that file's
-// header comment for the reasoning behind the fork/join_any/disable fork
-// structure.
-//
-// Runs at the same time, each on its own sequencer:
-//   - cpu_read_seq         -> cpu_sqr_h             (drives the CPU read side,
-//                                                     new file: tb/cpu_agent/cpu_read_seq.sv)
-//   - axi4_slave_read_seq  -> slave_read_sqr_h       (drives the AXI4 slave VIP
-//                                                      read response side)
-//--------------------------------------------------------------------------------------------
+
 class axi4_virtual_read_seq extends uvm_sequence;
   `uvm_object_utils(axi4_virtual_read_seq)
   `uvm_declare_p_sequencer(top_vseqr)

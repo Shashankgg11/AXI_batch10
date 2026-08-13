@@ -1,13 +1,6 @@
 `ifndef AXI4_SLAVE_WRITE_SEQ_INCLUDED_
 `define AXI4_SLAVE_WRITE_SEQ_INCLUDED_
 
-// NOTE: copied verbatim from hvl_top/test/sequences/slave_sequences/axi4_slave_write_seq.sv
-// - see tb/slave_seq/axi4_slave_base_seq.sv for why. Logic is untouched.
-
-//--------------------------------------------------------------------------------------------
-// Class: axi4_slave_write_seq
-// Extends the axi4_slave_base_seq and randomises the req item
-//--------------------------------------------------------------------------------------------
 class axi4_slave_write_seq extends axi4_slave_base_seq;
   `uvm_object_utils(axi4_slave_write_seq)
 

@@ -1,13 +1,5 @@
 `ifndef AXI4_SLAVE_READ_SEQ_INCLUDED_
 `define AXI4_SLAVE_READ_SEQ_INCLUDED_
-
-// NOTE: copied verbatim from hvl_top/test/sequences/slave_sequences/axi4_slave_read_seq.sv
-// - see tb/slave_seq/axi4_slave_base_seq.sv for why. Logic is untouched.
-
-//--------------------------------------------------------------------------------------------
-// Class: axi4_slave_read_seq
-// Extends the axi4_slave_read_seq and randomize the req item
-//--------------------------------------------------------------------------------------------
 class axi4_slave_read_seq extends axi4_slave_base_seq;
   `uvm_object_utils(axi4_slave_read_seq)
 
@@ -18,21 +10,11 @@ class axi4_slave_read_seq extends axi4_slave_base_seq;
   extern task body();
 endclass : axi4_slave_read_seq
 
-//--------------------------------------------------------------------------------------------
-// Construct: new
-//
-// Parameters:
-//  name - axi4_slave_read_seq
-//  intializes the memory for the object
-//--------------------------------------------------------------------------------------------
 function axi4_slave_read_seq::new(string name = "axi4_slave_read_seq");
   super.new(name);
 endfunction : new
 
-//--------------------------------------------------------------------------------------------
-//Task : Body
-//Creates the req of type slave transaction and randomises the req
-//--------------------------------------------------------------------------------------------
+
 task axi4_slave_read_seq::body();
   req=axi4_slave_tx::type_id::create("req");
 

@@ -1,12 +1,3 @@
-//--------------------------------------------------------------------------------------------
-// Class: axi4_virtual_read_test
-// NEW FILE. Requested testcase #2: runs the virtual sequence so that the
-// AXI4 slave read sequence and the CPU read sequence run together.
-//
-// Reads what the write test put in (same DUT memory/FIFO underneath), so
-// run axi4_virtual_write_test before this one in the same regression run
-// if you want the reads to hit real data rather than default/zero content.
-//--------------------------------------------------------------------------------------------
 class axi4_virtual_read_test extends base_test;
 
   `uvm_component_utils(axi4_virtual_read_test)

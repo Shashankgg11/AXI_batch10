@@ -1,9 +1,4 @@
-//--------------------------------------------------------------------------------------------
-// Package: cpu_tb_pkg
-// NEW FILE. Bundles every tb/ class into one package, in dependency order,
-// matching the vendor's own axi4_master_pkg.sv / axi4_slave_pkg.sv convention.
-// Needs axi4_globals_pkg and axi4_slave_pkg compiled/imported before this.
-//--------------------------------------------------------------------------------------------
+
 package cpu_tb_pkg;
 
   import uvm_pkg::*;
@@ -11,9 +6,6 @@ package cpu_tb_pkg;
   import axi4_globals_pkg::*;
   import axi4_slave_pkg::*;
 
-  // ADDED: axi4_slave_write_seq/axi4_slave_read_seq (copied into tb/slave_seq -
-  // see the note at the top of tb/slave_seq/axi4_slave_base_seq.sv for why).
-  // Only need axi4_slave_tx/axi4_slave_pkg types, both already imported above.
   `include "slave_seq/axi4_slave_base_seq.sv"
   `include "slave_seq/axi4_slave_write_seq.sv"
   `include "slave_seq/axi4_slave_read_seq.sv"

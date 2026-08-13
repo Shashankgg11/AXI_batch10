@@ -1,10 +1,3 @@
-//--------------------------------------------------------------------------------------------
-// Class: base_test
-// FIXED vs original:
-//   - was building "env" (broken class), now builds top_env (cpu_env + axi_vip_env)
-//   - ADDED run_phase: starts top_vseq on the virtual sequencer, so the test
-//     actually drives traffic instead of just elaborating and doing nothing
-//--------------------------------------------------------------------------------------------
 class base_test extends uvm_test;
 
   `uvm_component_utils(base_test)
