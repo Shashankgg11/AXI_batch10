@@ -49,8 +49,6 @@ class cpu_tx extends uvm_sequence_item;
       data.size() == ((len+1)*(1<<size));
 
     if(pkt_type == READ_PKT){
-      size == 0;
-      len == 0;
       data.size() == 1;
      }
   }

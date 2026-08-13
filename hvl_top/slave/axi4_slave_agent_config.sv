@@ -56,6 +56,8 @@ class axi4_slave_agent_config extends uvm_object;
   //Used to set default read data
   bit[DATA_WIDTH-1:0] user_rdata;
 
+  //read_data_type_mode_e read_data_mode = SLAVE_MEM_MODE;
+
   //constraint: maximum_txns
   //Make sure to have minimum txns to perform out_of_order
   constraint maximum_txns_c{maximum_transactions >= minimum_transactions;}
