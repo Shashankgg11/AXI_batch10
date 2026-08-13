@@ -20,7 +20,7 @@ class cpu_write_seq extends uvm_sequence #(cpu_tx);
       wr_en == 1;
       rd_en == 0;
       size == 2;
-      len == 3;
+      len == 2;
       lock == 0;
       cache == 0;
       prot == 0;

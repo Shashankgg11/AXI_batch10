@@ -1,15 +1,3 @@
-//--------------------------------------------------------------------------------------------
-// Class: cpu_env
-// FIXED vs original "env" class:
-//   - renamed env -> cpu_env (avoid an overly generic class name)
-//   - removed cpu_sub_h reference (subscriber was commented out but connect_phase
-//     still referenced it - would not compile)
-//   - removed the redundant/misnamed extra "seqr_h" (wrong type name "sequencer",
-//     and cpu_agent already owns its own sequencer - this was unused duplication)
-//   - fixed scoreboard class name: "scoreboard" -> "cpu_scoreboard"
-//   - connect_phase now actually wires cpu_monitor's wr_ap/rd_ap to the
-//     scoreboard's write/read imps (this connection didn't exist before)
-//--------------------------------------------------------------------------------------------
 class cpu_env extends uvm_env;
 
   `uvm_component_utils(cpu_env)

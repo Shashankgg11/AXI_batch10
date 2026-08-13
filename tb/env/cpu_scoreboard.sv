@@ -1,13 +1,21 @@
 `uvm_analysis_imp_decl(_write)
 `uvm_analysis_imp_decl(_read)
 `uvm_analysis_imp_decl(_axi_wr)
+`uvm_analysis_imp_decl(_axi_waddr)
+`uvm_analysis_imp_decl(_axi_wresp)
+`uvm_analysis_imp_decl(_axi_raddr)
+`uvm_analysis_imp_decl(_axi_rdata)
 
 class cpu_scoreboard extends uvm_scoreboard;
   `uvm_component_utils(cpu_scoreboard)
 
-  uvm_analysis_imp_write  #(cpu_tx, cpu_scoreboard)      write;
-  uvm_analysis_imp_read   #(cpu_tx, cpu_scoreboard)      read;
-  uvm_analysis_imp_axi_wr #(axi4_slave_tx, cpu_scoreboard) axi_wr;   // NEW - from slave VIP monitor
+  uvm_analysis_imp_write  #(cpu_tx, cpu_scoreboard) write;
+  uvm_analysis_imp_read   #(cpu_tx, cpu_scoreboard) read;
+  uvm_analysis_imp_axi_wr #(axi4_slave_tx, cpu_scoreboard) axi_wr;   
+  uvm_analysis_imp_axi_waddr #(axi4_slave_tx, cpu_scoreboard) axi_waddr; 
+  uvm_analysis_imp_axi_wresp #(axi4_slave_tx, cpu_scoreboard) axi_wresp; 
+  uvm_analysis_imp_axi_raddr #(axi4_slave_tx, cpu_scoreboard) axi_raddr; 
+  uvm_analysis_imp_axi_rdata #(axi4_slave_tx, cpu_scoreboard) axi_rdata;
 
   cpu_tx tx_h;
 
@@ -21,35 +29,31 @@ class cpu_scoreboard extends uvm_scoreboard;
 
   int wr_fifo_depth = 4096;  
 
+
+  axi4_slave_tx aw_pending_q[$];
+  axi4_slave_tx ar_pending_q[$];
+
   function new(string name = "cpu_scoreboard", uvm_component parent = null);
     super.new(name, parent);
   endfunction
 
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
-    write  = new("write", this);
-    read   = new("read", this);
-    axi_wr = new("axi_wr", this);
+    write     = new("write", this);
+    read      = new("read", this);
+    axi_wr    = new("axi_wr", this);
+    axi_waddr = new("axi_waddr", this);
+    axi_wresp = new("axi_wresp", this);
+    axi_raddr = new("axi_raddr", this);
+    axi_rdata = new("axi_rdata", this);
   endfunction
 
-  //-----------------------------------------------------------
-  // write_axi_wr(): NEW - called once per COMPLETE write burst
-  // observed on the AXI bus by the slave VIP's monitor
-  // (axi4_slave_mon_proxy_h.axi4_slave_write_data_analysis_port).
-  //
-  // This is the check that actually catches the beat_cnt/WVALID
-  // bug in AXI_MASTER_WRITE_CONTROL.v: if the master's write-data
-  // FSM undercounts beats (per-cycle beat_cnt decrementing on
-  // WREADY alone instead of WREADY && WVALID), the slave will have
-  // received fewer W beats than AWLEN+1 promised - t.wdata.size()
-  // will be short. That's directly checkable here without needing
-  // to look at internal RTL signals at all - purely from the bus.
-  //-----------------------------------------------------------
+  
   function void write_axi_wr(axi4_slave_tx t);
     int expected_beats;
     expected_beats = t.awlen + 1;
 
-    if (t.wdata.size() != expected_beats) begin
+    if(t.wdata.size() != expected_beats)begin
       `uvm_error(get_type_name(),
                  $sformatf("AXI W-CHANNEL BEAT COUNT MISMATCH: awaddr=0x%0h awid=%s awlen=%0d -> expected %0d W beats, slave received %0d (likely the beat_cnt/WVALID FSM bug in AXI_MASTER_WRITE_CONTROL.v)",
                            t.awaddr, t.awid.name(), t.awlen, expected_beats, t.wdata.size()))
@@ -60,10 +64,98 @@ class cpu_scoreboard extends uvm_scoreboard;
                 UVM_LOW)
     end
 
-    if (t.wstrb.size() != expected_beats) begin
+    if(t.wstrb.size() != expected_beats)begin
       `uvm_error(get_type_name(),
                  $sformatf("AXI W-CHANNEL WSTRB COUNT MISMATCH: awaddr=0x%0h expected %0d, got %0d",
                            t.awaddr, expected_beats, t.wstrb.size()))
+    end
+  endfunction
+
+  //-----------------------------------------------------------
+  // write_axi_waddr(): NEW - AW channel sanity check.
+  // Pushes into aw_pending_q so write_axi_wresp() can correlate
+  // each B response back to the AW that requested it.
+  //-----------------------------------------------------------
+  function void write_axi_waddr(axi4_slave_tx t);
+    if (!(t.awaddr inside {[0 : (2**ADDRESS_WIDTH)-1]})) begin
+      `uvm_error(get_type_name(),
+                 $sformatf("AXI AW-CHANNEL: illegal awaddr=0x%0h", t.awaddr))
+    end
+    aw_pending_q.push_back(t);
+  endfunction
+
+  //-----------------------------------------------------------
+  // write_axi_wresp(): NEW - B channel check.
+  // Confirms every AW eventually gets exactly one matching B
+  // response, with the right ID.
+  //-----------------------------------------------------------
+  function void write_axi_wresp(axi4_slave_tx t);
+    axi4_slave_tx exp_aw;
+
+    if (aw_pending_q.size() == 0) begin
+      `uvm_error(get_type_name(),
+                 $sformatf("AXI B-CHANNEL: got response bid=%s bresp=%s with no outstanding AW",
+                           t.bid.name(), t.bresp.name()))
+      return;
+    end
+
+    exp_aw = aw_pending_q.pop_front();
+
+    if (t.bid !== exp_aw.awid) begin
+      `uvm_error(get_type_name(),
+                 $sformatf("AXI B-CHANNEL ID MISMATCH: expected bid=%s (from awaddr=0x%0h), got bid=%s",
+                           exp_aw.awid.name(), exp_aw.awaddr, t.bid.name()))
+    end else begin
+      `uvm_info(get_type_name(),
+                $sformatf("AXI B-CHANNEL MATCH: awaddr=0x%0h bid=%s bresp=%s",
+                          exp_aw.awaddr, t.bid.name(), t.bresp.name()),
+                UVM_LOW)
+    end
+  endfunction
+
+  //-----------------------------------------------------------
+  // write_axi_raddr(): NEW - AR channel sanity check.
+  //-----------------------------------------------------------
+  function void write_axi_raddr(axi4_slave_tx t);
+    if (!(t.araddr inside {[0 : (2**ADDRESS_WIDTH)-1]})) begin
+      `uvm_error(get_type_name(),
+                 $sformatf("AXI AR-CHANNEL: illegal araddr=0x%0h", t.araddr))
+    end
+    ar_pending_q.push_back(t);
+  endfunction
+
+  //-----------------------------------------------------------
+  // write_axi_rdata(): NEW - R channel check.
+  // Confirms beat count == ARLEN+1 and ID matches.
+  //-----------------------------------------------------------
+  function void write_axi_rdata(axi4_slave_tx t);
+    axi4_slave_tx exp_ar;
+    int expected_beats;
+
+    if (ar_pending_q.size() == 0) begin
+      `uvm_error(get_type_name(),
+                 $sformatf("AXI R-CHANNEL: got read data with no outstanding AR (araddr=0x%0h)", t.araddr))
+      return;
+    end
+
+    exp_ar = ar_pending_q.pop_front();
+    expected_beats = exp_ar.arlen + 1;
+
+    if (t.rdata.size() != expected_beats) begin
+      `uvm_error(get_type_name(),
+                 $sformatf("AXI R-CHANNEL BEAT COUNT MISMATCH: araddr=0x%0h arlen=%0d -> expected %0d R beats, got %0d",
+                           exp_ar.araddr, exp_ar.arlen, expected_beats, t.rdata.size()))
+    end else begin
+      `uvm_info(get_type_name(),
+                $sformatf("AXI R-CHANNEL beat count MATCH: araddr=0x%0h beats=%0d",
+                          exp_ar.araddr, t.rdata.size()),
+                UVM_LOW)
+    end
+
+    if (t.arid !== exp_ar.arid) begin
+      `uvm_error(get_type_name(),
+                 $sformatf("AXI R-CHANNEL ID MISMATCH: expected arid=%s, got rid on packet for araddr=0x%0h",
+                           exp_ar.arid.name(), exp_ar.araddr))
     end
   endfunction
 
