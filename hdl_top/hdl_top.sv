@@ -1,21 +1,6 @@
 `ifndef HDL_TOP_INCLUDED_
 `define HDL_TOP_INCLUDED_
 
-//--------------------------------------------------------------------------------------------
-// Module      : HDL Top
-// Description : Has the axi4 interface, the slave agent bfm, the cpu_if, and now the
-//               actual DUT (Top_Module_AXI4) wired to both.
-//
-// CHANGED vs original:
-//   - REMOVED axi4_master_agent_bfm instantiation. Top_Module_AXI4 is now the real
-//     AXI4 master driving AWVALID/ARVALID/etc onto intf - leaving the VIP's own
-//     master BFM instantiated on the same intf would fight it for the bus.
-//   - axi4_slave_agent_bfm is UNCHANGED - it still responds to whatever DUT drives.
-//   - ADDED: cpu_if instantiation + config_db::set so cpu_driver/cpu_monitor can find it.
-//   - ADDED: Top_Module_AXI4 instantiation, wired to cpu_if (FIFO side) and intf (AXI side).
-//     WID_a has no corresponding signal in axi4_if (AXI4 dropped WID vs AXI3) - left
-//     unconnected, harmless dangling output.
-//--------------------------------------------------------------------------------------------
 
 module hdl_top;
 
