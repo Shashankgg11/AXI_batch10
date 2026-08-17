@@ -1,37 +1,3 @@
-# vsim -c tb_top hdl_top -do "run -all; quit" "+UVM_TESTNAME=axi4_virtual_write_test" "+UVM_VERBOSITY=UVM_HIGH" 
-# Start time: 12:56:45 on Aug 17,2026
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Warning: rtl/decoder.v(370): (vopt-2241) Connection width does not match width of port 'bresp'. The port definition is at: rtl/write_response_handler.v(9).
-# ** Warning: rtl/Top_Module_AXI4.v(133): (vopt-2241) Connection width does not match width of port 'write_data'. The port definition is at: rtl/decoder.v(25).
-# ** Warning: rtl/Top_Module_AXI4.v(133): (vopt-2241) Connection width does not match width of port 'bresp'. The port definition is at: rtl/decoder.v(64).
-# ** Warning: rtl/Top_Module_AXI4.v(133): (vopt-2241) Connection width does not match width of port 'rresp'. The port definition is at: rtl/decoder.v(59).
-# ** Warning: rtl/Top_Module_AXI4.v(133): (vopt-2241) Connection width does not match width of port 'arlock'. The port definition is at: rtl/decoder.v(47).
-# ** Warning: rtl/AXI_Master.v(124): (vopt-2241) Connection width does not match width of port 'AWID'. The port definition is at: rtl/AXI_MASTER_WRITE_CONTROL.v(32).
-# ** Warning: rtl/AXI_Master.v(124): (vopt-2241) Connection width does not match width of port 'WDATA'. The port definition is at: rtl/AXI_MASTER_WRITE_CONTROL.v(47).
-# ** Warning: rtl/AXI_Master.v(124): (vopt-2241) Connection width does not match width of port 'awlen_d'. The port definition is at: rtl/AXI_MASTER_WRITE_CONTROL.v(63).
-# ** Warning: rtl/AXI_Master.v(124): (vopt-2241) Connection width does not match width of port 'wdata_d'. The port definition is at: rtl/AXI_MASTER_WRITE_CONTROL.v(70).
-# ** Warning: rtl/AXI_Master.v(182): (vopt-2241) Connection width does not match width of port 'ARLEN'. The port definition is at: rtl/AXI_MASTER_READ_CONTROL.v(32).
-# ** Warning: rtl/AXI_Master.v(182): (vopt-2241) Connection width does not match width of port 'RDATA'. The port definition is at: rtl/AXI_MASTER_READ_CONTROL.v(42).
-# ** Warning: rtl/AXI_Master.v(182): (vopt-2241) Connection width does not match width of port 'rdata_d'. The port definition is at: rtl/AXI_MASTER_READ_CONTROL.v(66).
-# ** Warning: rtl/AXI_Master.v(182): (vopt-2241) Connection width does not match width of port 'rid_d'. The port definition is at: rtl/AXI_MASTER_READ_CONTROL.v(68).
-# ** Warning: rtl/Top_Module_AXI4.v(177): (vopt-2241) Connection width does not match width of port 'AWID'. The port definition is at: rtl/AXI_Master.v(30).
-# ** Warning: rtl/Top_Module_AXI4.v(177): (vopt-2241) Connection width does not match width of port 'AWLEN'. The port definition is at: rtl/AXI_Master.v(32).
-# ** Warning: rtl/Top_Module_AXI4.v(177): (vopt-2241) Connection width does not match width of port 'WDATA'. The port definition is at: rtl/AXI_Master.v(44).
-# ** Warning: rtl/Top_Module_AXI4.v(177): (vopt-2241) Connection width does not match width of port 'ARLEN'. The port definition is at: rtl/AXI_Master.v(58).
-# ** Warning: rtl/Top_Module_AXI4.v(177): (vopt-2241) Connection width does not match width of port 'RDATA'. The port definition is at: rtl/AXI_Master.v(69).
-# ** Warning: rtl/Top_Module_AXI4.v(177): (vopt-2241) Connection width does not match width of port 'awlen_d'. The port definition is at: rtl/AXI_Master.v(79).
-# ** Warning: rtl/Top_Module_AXI4.v(177): (vopt-2241) Connection width does not match width of port 'wdata_d'. The port definition is at: rtl/AXI_Master.v(86).
-# ** Warning: rtl/Top_Module_AXI4.v(177): (vopt-2241) Connection width does not match width of port 'rdata_d'. The port definition is at: rtl/AXI_Master.v(107).
-# ** Warning: rtl/Top_Module_AXI4.v(177): (vopt-2241) Connection width does not match width of port 'rid_d'. The port definition is at: rtl/AXI_Master.v(109).
-# ** Warning: hdl_top/hdl_top.sv(80): (vopt-2241) Connection width does not match width of port 'AWLEN_a'. The port definition is at: rtl/Top_Module_AXI4.v(44).
-# ** Warning: hdl_top/hdl_top.sv(80): (vopt-2241) Connection width does not match width of port 'AWCACHE_a'. The port definition is at: rtl/Top_Module_AXI4.v(48).
-# ** Warning: hdl_top/hdl_top.sv(80): (vopt-2241) Connection width does not match width of port 'WDATA_a'. The port definition is at: rtl/Top_Module_AXI4.v(61).
-# ** Warning: hdl_top/hdl_top.sv(80): (vopt-2241) Connection width does not match width of port 'WSTRB_a'. The port definition is at: rtl/Top_Module_AXI4.v(62).
-# ** Warning: hdl_top/hdl_top.sv(80): (vopt-2241) Connection width does not match width of port 'ARLEN_a'. The port definition is at: rtl/Top_Module_AXI4.v(53).
-# ** Warning: hdl_top/hdl_top.sv(80): (vopt-2241) Connection width does not match width of port 'ARCACHE_a'. The port definition is at: rtl/Top_Module_AXI4.v(57).
-# ** Warning: hdl_top/hdl_top.sv(80): (vopt-2241) Connection width does not match width of port 'RDATA_a'. The port definition is at: rtl/Top_Module_AXI4.v(32).
-# ** Warning: hdl_top/hdl_top.sv(80): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 46, found 45.
-# ** Warning: hdl_top/hdl_top.sv(80): (vopt-2718) [TFMPC] - Missing connection for port 'WID_a'.
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
 # //
@@ -46,20 +12,90 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
+# vsim -novopt tb_top hdl_top "+UVM_TESTNAME=axi4_virtual_write_read_test" "+UVM_VERBOSITY=UVM_MEDIUM" 
+# Start time: 15:28:46 on Aug 17,2026
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
 # Loading sv_std.std
-# Loading work.cpu_if(fast)
-# Loading work.axi4_slave_driver_bfm(fast)
-# Loading work.axi4_slave_monitor_bfm(fast)
-# Loading work.axi4_globals_pkg(fast)
 # Loading mtiUvm.uvm_pkg
-# Loading work.axi4_slave_pkg(fast)
-# Loading work.cpu_tb_pkg(fast)
-# Loading work.axi4_globals_pkg_sv_unit(fast)
-# Loading work.tb_top(fast)
-# Loading work.hdl_top(fast)
-# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.axi4_globals_pkg
+# Loading work.axi4_globals_pkg_sv_unit
+# Loading work.cpu_if
+# Loading work.axi4_slave_pkg
+# Loading work.cpu_tb_pkg
+# Loading work.tb_top
+# Loading work.hdl_top
+# Loading work.axi4_if
+# Loading work.Top_Module_AXI4
+# Loading work.design_fifo
+# Loading work.sync_fifo
+# Loading work.my_decoder
+# Loading work.write_response_handler
+# Loading work.AXI_Master
+# Loading work.AXI_MASTER_WRITE__CONTROL
+# Loading work.AXI_MASTER_READ_Control
+# Loading mtiUvm.questa_uvm_pkg
+# Loading work.axi4_slave_agent_bfm
+# Loading work.axi4_slave_driver_bfm
+# Loading work.axi4_slave_monitor_bfm
+# Loading work.slave_assertions
+# ** Warning: (vsim-3017) hdl_top/hdl_top.sv(80): [TFMPC] - Too few port connections. Expected 46, found 45.
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut File: rtl/Top_Module_AXI4.v
+# ** Warning: (vsim-3015) hdl_top/hdl_top.sv(80): [PCDPC] - Port size (4) does not match connection size (8) for port 'AWLEN_a'. The port definition is at: rtl/Top_Module_AXI4.v(44).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut File: rtl/Top_Module_AXI4.v
+# ** Warning: (vsim-3015) hdl_top/hdl_top.sv(80): [PCDPC] - Port size (2) does not match connection size (4) for port 'AWCACHE_a'. The port definition is at: rtl/Top_Module_AXI4.v(48).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut File: rtl/Top_Module_AXI4.v
+# ** Warning: (vsim-3015) hdl_top/hdl_top.sv(80): [PCDPC] - Port size (4) does not match connection size (8) for port 'ARLEN_a'. The port definition is at: rtl/Top_Module_AXI4.v(53).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut File: rtl/Top_Module_AXI4.v
+# ** Warning: (vsim-3015) hdl_top/hdl_top.sv(80): [PCDPC] - Port size (2) does not match connection size (4) for port 'ARCACHE_a'. The port definition is at: rtl/Top_Module_AXI4.v(57).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut File: rtl/Top_Module_AXI4.v
+# ** Warning: (vsim-3722) hdl_top/hdl_top.sv(80): [TFMPC] - Missing connection for port 'WID_a'.
+# ** Warning: (vsim-3015) rtl/Top_Module_AXI4.v(133): [PCDPC] - Port size (128) does not match connection size (1) for port 'write_data'. The port definition is at: rtl/decoder.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/decoder File: rtl/decoder.v
+# ** Warning: (vsim-3015) rtl/Top_Module_AXI4.v(133): [PCDPC] - Port size (4) does not match connection size (2) for port 'bresp'. The port definition is at: rtl/decoder.v(64).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/decoder File: rtl/decoder.v
+# ** Warning: (vsim-3015) rtl/Top_Module_AXI4.v(133): [PCDPC] - Port size (4) does not match connection size (2) for port 'rresp'. The port definition is at: rtl/decoder.v(59).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/decoder File: rtl/decoder.v
+# ** Warning: (vsim-3015) rtl/Top_Module_AXI4.v(133): [PCDPC] - Port size (10) does not match connection size (2) for port 'arlock'. The port definition is at: rtl/decoder.v(47).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/decoder File: rtl/decoder.v
+# ** Warning: (vsim-3015) rtl/decoder.v(370): [PCDPC] - Port size (2) does not match connection size (4) for port 'bresp'. The port definition is at: rtl/write_response_handler.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/decoder/wresp File: rtl/write_response_handler.v
+# ** Warning: (vsim-3015) rtl/Top_Module_AXI4.v(177): [PCDPC] - Port size (8) does not match connection size (4) for port 'AWID'. The port definition is at: rtl/AXI_Master.v(30).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi File: rtl/AXI_Master.v
+# ** Warning: (vsim-3015) rtl/Top_Module_AXI4.v(177): [PCDPC] - Port size (8) does not match connection size (4) for port 'AWLEN'. The port definition is at: rtl/AXI_Master.v(32).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi File: rtl/AXI_Master.v
+# ** Warning: (vsim-3015) rtl/Top_Module_AXI4.v(177): [PCDPC] - Port size (64) does not match connection size (32) for port 'WDATA'. The port definition is at: rtl/AXI_Master.v(44).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi File: rtl/AXI_Master.v
+# ** Warning: (vsim-3015) rtl/Top_Module_AXI4.v(177): [PCDPC] - Port size (8) does not match connection size (4) for port 'ARLEN'. The port definition is at: rtl/AXI_Master.v(58).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi File: rtl/AXI_Master.v
+# ** Warning: (vsim-3015) rtl/Top_Module_AXI4.v(177): [PCDPC] - Port size (64) does not match connection size (32) for port 'RDATA'. The port definition is at: rtl/AXI_Master.v(69).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi File: rtl/AXI_Master.v
+# ** Warning: (vsim-3015) rtl/Top_Module_AXI4.v(177): [PCDPC] - Port size (8) does not match connection size (4) for port 'awlen_d'. The port definition is at: rtl/AXI_Master.v(79).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi File: rtl/AXI_Master.v
+# ** Warning: (vsim-3015) rtl/Top_Module_AXI4.v(177): [PCDPC] - Port size (64) does not match connection size (32) for port 'wdata_d'. The port definition is at: rtl/AXI_Master.v(86).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi File: rtl/AXI_Master.v
+# ** Warning: (vsim-3015) rtl/Top_Module_AXI4.v(177): [PCDPC] - Port size (64) does not match connection size (32) for port 'rdata_d'. The port definition is at: rtl/AXI_Master.v(107).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi File: rtl/AXI_Master.v
+# ** Warning: (vsim-3015) rtl/Top_Module_AXI4.v(177): [PCDPC] - Port size (8) does not match connection size (4) for port 'rid_d'. The port definition is at: rtl/AXI_Master.v(109).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi File: rtl/AXI_Master.v
+# ** Warning: (vsim-3015) rtl/AXI_Master.v(124): [PCDPC] - Port size (4) does not match connection size (8) for port 'AWID'. The port definition is at: rtl/AXI_MASTER_WRITE_CONTROL.v(32).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi/AXI_WRITE_CONTROL File: rtl/AXI_MASTER_WRITE_CONTROL.v
+# ** Warning: (vsim-3015) rtl/AXI_Master.v(124): [PCDPC] - Port size (32) does not match connection size (64) for port 'WDATA'. The port definition is at: rtl/AXI_MASTER_WRITE_CONTROL.v(47).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi/AXI_WRITE_CONTROL File: rtl/AXI_MASTER_WRITE_CONTROL.v
+# ** Warning: (vsim-3015) rtl/AXI_Master.v(124): [PCDPC] - Port size (4) does not match connection size (8) for port 'awlen_d'. The port definition is at: rtl/AXI_MASTER_WRITE_CONTROL.v(63).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi/AXI_WRITE_CONTROL File: rtl/AXI_MASTER_WRITE_CONTROL.v
+# ** Warning: (vsim-3015) rtl/AXI_Master.v(124): [PCDPC] - Port size (32) does not match connection size (64) for port 'wdata_d'. The port definition is at: rtl/AXI_MASTER_WRITE_CONTROL.v(70).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi/AXI_WRITE_CONTROL File: rtl/AXI_MASTER_WRITE_CONTROL.v
+# ** Warning: (vsim-3015) rtl/AXI_Master.v(182): [PCDPC] - Port size (4) does not match connection size (8) for port 'ARLEN'. The port definition is at: rtl/AXI_MASTER_READ_CONTROL.v(32).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi/AXI_READ_CONTROL File: rtl/AXI_MASTER_READ_CONTROL.v
+# ** Warning: (vsim-3015) rtl/AXI_Master.v(182): [PCDPC] - Port size (32) does not match connection size (64) for port 'RDATA'. The port definition is at: rtl/AXI_MASTER_READ_CONTROL.v(42).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi/AXI_READ_CONTROL File: rtl/AXI_MASTER_READ_CONTROL.v
+# ** Warning: (vsim-3015) rtl/AXI_Master.v(182): [PCDPC] - Port size (32) does not match connection size (64) for port 'rdata_d'. The port definition is at: rtl/AXI_MASTER_READ_CONTROL.v(66).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi/AXI_READ_CONTROL File: rtl/AXI_MASTER_READ_CONTROL.v
+# ** Warning: (vsim-3015) rtl/AXI_Master.v(182): [PCDPC] - Port size (4) does not match connection size (8) for port 'rid_d'. The port definition is at: rtl/AXI_MASTER_READ_CONTROL.v(68).
+#    Time: 0 ps  Iteration: 0  Instance: /hdl_top/dut/DUT_axi/AXI_READ_CONTROL File: rtl/AXI_MASTER_READ_CONTROL.v
 # Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
-# run -all
+add wave -position insertpoint sim:/hdl_top/intf/*
+run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
 # (C) 2007-2013 Mentor Graphics Corporation
@@ -82,28 +118,720 @@
 # 
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
-# UVM_INFO @ 0: reporter [RNTST] Running test axi4_virtual_write_test...
+# UVM_INFO @ 0: reporter [RNTST] Running test axi4_virtual_write_read_test...
 # HDL_TOP
 # UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(94) @ 0: reporter [axi4 slave driver bfm] AXI4 SLAVE DRIVER BFM
 # UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_monitor_bfm.sv(82) @ 0: reporter [axi4 slave monitor bfm] AXI4 SLAVE MONITOR BFM
-# UVM_INFO hdl_top/slave_assertions.sv(70) @ 0: reporter [SLAVE_ASSERTIONS] SLAVE_ASSERTIONS
 # UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_agent_bfm.sv(175) @ 0: reporter [axi4 slave agent bfm] AXI4 SLAVE AGENT BFM
-# ** Fatal: (SIGSEGV) Bad handle or reference.
-#    Time: 0 ps  Iteration: 7  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#1847_f6d7153 File: /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_common_phases.svh
-# Fatal error in Function axi4_slave_pkg/axi4_slave_agent::build_phase at vip/axi_slave_vip/axi4_slave_agent.sv line 66
+# UVM_INFO hdl_top/slave_assertions.sv(70) @ 0: reporter [SLAVE_ASSERTIONS] SLAVE_ASSERTIONS
+# ** Warning: (vsim-8474) vip/axi_slave_vip/axi4_slave_coverage.sv(34): A higher value '31' is found in bin 'AWLEN_32' of Coverpoint 'AWLEN_CP'. It is invalid and will be ignored.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'AWLEN_32' in Coverpoint 'AWLEN_CP' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8474) vip/axi_slave_vip/axi4_slave_coverage.sv(35): A higher value '63' is found in bin 'AWLEN_64' of Coverpoint 'AWLEN_CP'. It is invalid and will be ignored.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'AWLEN_64' in Coverpoint 'AWLEN_CP' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8474) vip/axi_slave_vip/axi4_slave_coverage.sv(36): A higher value '127' is found in bin 'AWLEN_128' of Coverpoint 'AWLEN_CP'. It is invalid and will be ignored.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'AWLEN_128' in Coverpoint 'AWLEN_CP' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8474) vip/axi_slave_vip/axi4_slave_coverage.sv(37): A higher value '255' is found in bin 'AWLEN_256' of Coverpoint 'AWLEN_CP'. It is invalid and will be ignored.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'AWLEN_256' in Coverpoint 'AWLEN_CP' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8474) vip/axi_slave_vip/axi4_slave_coverage.sv(85): A higher value '31' is found in bin 'ARLEN_32' of Coverpoint 'ARLEN_CP'. It is invalid and will be ignored.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'ARLEN_32' in Coverpoint 'ARLEN_CP' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8474) vip/axi_slave_vip/axi4_slave_coverage.sv(86): A higher value '63' is found in bin 'ARLEN_64' of Coverpoint 'ARLEN_CP'. It is invalid and will be ignored.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'ARLEN_64' in Coverpoint 'ARLEN_CP' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8474) vip/axi_slave_vip/axi4_slave_coverage.sv(87): A higher value '127' is found in bin 'ARLEN_128' of Coverpoint 'ARLEN_CP'. It is invalid and will be ignored.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'ARLEN_128' in Coverpoint 'ARLEN_CP' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8474) vip/axi_slave_vip/axi4_slave_coverage.sv(88): A higher value '255' is found in bin 'ARLEN_256' of Coverpoint 'ARLEN_CP'. It is invalid and will be ignored.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'ARLEN_256' in Coverpoint 'ARLEN_CP' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8474) vip/axi_slave_vip/axi4_slave_coverage.sv(141): A higher value '31' is found in bin 'ignr' of Cross 'AWLENGTH_CP_X_AWSIZE_X_AWBURST'. It is invalid and will be ignored.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8474) vip/axi_slave_vip/axi4_slave_coverage.sv(141): A higher value '63' is found in bin 'ignr' of Cross 'AWLENGTH_CP_X_AWSIZE_X_AWBURST'. It is invalid and will be ignored.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8474) vip/axi_slave_vip/axi4_slave_coverage.sv(141): A higher value '127' is found in bin 'ignr' of Cross 'AWLENGTH_CP_X_AWSIZE_X_AWBURST'. It is invalid and will be ignored.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8474) vip/axi_slave_vip/axi4_slave_coverage.sv(141): A higher value '255' is found in bin 'ignr' of Cross 'AWLENGTH_CP_X_AWSIZE_X_AWBURST'. It is invalid and will be ignored.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8559) After removing the invalid values, the intersect values list associated with bin 'ignr' in Cross 'AWLENGTH_CP_X_AWSIZE_X_AWBURST' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8560) On evaluating the select expression of Cross bin 'AWLENGTH_CP_X_AWSIZE_X_AWBURST.ignr' in Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ', the bin is found to be empty since no cross products are selected.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8474) vip/axi_slave_vip/axi4_slave_coverage.sv(144): A higher value '31' is found in bin 'ignr' of Cross 'ARLENGTH_CP_X_ARSIZE_X_ARBURST'. It is invalid and will be ignored.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8474) vip/axi_slave_vip/axi4_slave_coverage.sv(144): A higher value '63' is found in bin 'ignr' of Cross 'ARLENGTH_CP_X_ARSIZE_X_ARBURST'. It is invalid and will be ignored.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8474) vip/axi_slave_vip/axi4_slave_coverage.sv(144): A higher value '127' is found in bin 'ignr' of Cross 'ARLENGTH_CP_X_ARSIZE_X_ARBURST'. It is invalid and will be ignored.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8474) vip/axi_slave_vip/axi4_slave_coverage.sv(144): A higher value '255' is found in bin 'ignr' of Cross 'ARLENGTH_CP_X_ARSIZE_X_ARBURST'. It is invalid and will be ignored.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8559) After removing the invalid values, the intersect values list associated with bin 'ignr' in Cross 'ARLENGTH_CP_X_ARSIZE_X_ARBURST' of Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ' has converged to empty list.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8560) On evaluating the select expression of Cross bin 'ARLENGTH_CP_X_ARSIZE_X_ARBURST.ignr' in Covergroup instance '\/axi4_slave_pkg::axi4_slave_coverage::axi4_slave_covergroup ', the bin is found to be empty since no cross products are selected.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# --------------------------------------------------------------------------------------------
+# Name                                               Type                          Size  Value
+# --------------------------------------------------------------------------------------------
+# uvm_test_top                                       axi4_virtual_write_read_test  -     @469 
+#   env_h                                            top_env                       -     @488 
+#     axi_vip_env_h                                  axi_vip_env                   -     @502 
+#       slave_agt_h                                  axi4_slave_agent              -     @619 
+#         axi4_slave_cov_h                           axi4_slave_coverage           -     @1322
+#           analysis_imp                             uvm_analysis_imp              -     @1329
+#         axi4_slave_drv_proxy_h                     axi4_slave_driver_proxy       -     @627 
+#           axi4_slave_read_addr_fifo_h              uvm_tlm_fifo #(T)             -     @838 
+#             get_ap                                 uvm_analysis_port             -     @869 
+#             get_peek_export                        uvm_get_peek_imp              -     @853 
+#             put_ap                                 uvm_analysis_port             -     @861 
+#             put_export                             uvm_put_imp                   -     @845 
+#           axi4_slave_read_data_in_fifo_h           uvm_tlm_fifo #(T)             -     @877 
+#             get_ap                                 uvm_analysis_port             -     @908 
+#             get_peek_export                        uvm_get_peek_imp              -     @892 
+#             put_ap                                 uvm_analysis_port             -     @900 
+#             put_export                             uvm_put_imp                   -     @884 
+#           axi4_slave_write_addr_fifo_h             uvm_tlm_fifo #(T)             -     @682 
+#             get_ap                                 uvm_analysis_port             -     @713 
+#             get_peek_export                        uvm_get_peek_imp              -     @697 
+#             put_ap                                 uvm_analysis_port             -     @705 
+#             put_export                             uvm_put_imp                   -     @689 
+#           axi4_slave_write_data_in_fifo_h          uvm_tlm_fifo #(T)             -     @721 
+#             get_ap                                 uvm_analysis_port             -     @752 
+#             get_peek_export                        uvm_get_peek_imp              -     @736 
+#             put_ap                                 uvm_analysis_port             -     @744 
+#             put_export                             uvm_put_imp                   -     @728 
+#           axi4_slave_write_data_out_fifo_h         uvm_tlm_fifo #(T)             -     @799 
+#             get_ap                                 uvm_analysis_port             -     @830 
+#             get_peek_export                        uvm_get_peek_imp              -     @814 
+#             put_ap                                 uvm_analysis_port             -     @822 
+#             put_export                             uvm_put_imp                   -     @806 
+#           axi4_slave_write_response_fifo_h         uvm_tlm_fifo #(T)             -     @760 
+#             get_ap                                 uvm_analysis_port             -     @791 
+#             get_peek_export                        uvm_get_peek_imp              -     @775 
+#             put_ap                                 uvm_analysis_port             -     @783 
+#             put_export                             uvm_put_imp                   -     @767 
+#           axi_read_rsp_port                        uvm_analysis_port             -     @674 
+#           axi_read_seq_item_port                   uvm_seq_item_pull_port        -     @658 
+#           axi_write_rsp_port                       uvm_analysis_port             -     @666 
+#           axi_write_seq_item_port                  uvm_seq_item_pull_port        -     @650 
+#           rsp_port                                 uvm_analysis_port             -     @642 
+#           seq_item_port                            uvm_seq_item_pull_port        -     @634 
+#         axi4_slave_mon_proxy_h                     axi4_slave_monitor_proxy      -     @1134
+#           axi4_slave_read_address_analysis_port    uvm_analysis_port             -     @1141
+#           axi4_slave_read_data_analysis_port       uvm_analysis_port             -     @1149
+#           axi4_slave_read_fifo_h                   uvm_tlm_analysis_fifo #(T)    -     @1275
+#             analysis_export                        uvm_analysis_imp              -     @1314
+#             get_ap                                 uvm_analysis_port             -     @1306
+#             get_peek_export                        uvm_get_peek_imp              -     @1290
+#             put_ap                                 uvm_analysis_port             -     @1298
+#             put_export                             uvm_put_imp                   -     @1282
+#           axi4_slave_write_address_analysis_port   uvm_analysis_port             -     @1157
+#           axi4_slave_write_address_fifo_h          uvm_tlm_analysis_fifo #(T)    -     @1181
+#             analysis_export                        uvm_analysis_imp              -     @1220
+#             get_ap                                 uvm_analysis_port             -     @1212
+#             get_peek_export                        uvm_get_peek_imp              -     @1196
+#             put_ap                                 uvm_analysis_port             -     @1204
+#             put_export                             uvm_put_imp                   -     @1188
+#           axi4_slave_write_data_analysis_port      uvm_analysis_port             -     @1165
+#           axi4_slave_write_data_fifo_h             uvm_tlm_analysis_fifo #(T)    -     @1228
+#             analysis_export                        uvm_analysis_imp              -     @1267
+#             get_ap                                 uvm_analysis_port             -     @1259
+#             get_peek_export                        uvm_get_peek_imp              -     @1243
+#             put_ap                                 uvm_analysis_port             -     @1251
+#             put_export                             uvm_put_imp                   -     @1235
+#           axi4_slave_write_response_analysis_port  uvm_analysis_port             -     @1173
+#         axi4_slave_read_seqr_h                     axi4_slave_read_sequencer     -     @1025
+#           rsp_export                               uvm_analysis_export           -     @1032
+#           seq_item_export                          uvm_seq_item_pull_imp         -     @1126
+#           arbitration_queue                        array                         0     -    
+#           lock_queue                               array                         0     -    
+#           num_last_reqs                            integral                      32    'd1  
+#           num_last_rsps                            integral                      32    'd1  
+#         axi4_slave_write_seqr_h                    axi4_slave_write_sequencer    -     @916 
+#           rsp_export                               uvm_analysis_export           -     @923 
+#           seq_item_export                          uvm_seq_item_pull_imp         -     @1017
+#           arbitration_queue                        array                         0     -    
+#           lock_queue                               array                         0     -    
+#           num_last_reqs                            integral                      32    'd1  
+#           num_last_rsps                            integral                      32    'd1  
+#     cpu_env_h                                      cpu_env                       -     @495 
+#       cpu_agt_h                                    cpu_agent                     -     @1349
+#         cpu_drv_h                                  cpu_driver                    -     @1473
+#           rsp_port                                 uvm_analysis_port             -     @1488
+#           seq_item_port                            uvm_seq_item_pull_port        -     @1480
+#         cpu_mon_h                                  cpu_monitor                   -     @1496
+#           rd_ap                                    uvm_analysis_port             -     @1511
+#           wr_ap                                    uvm_analysis_port             -     @1503
+#         cpu_seqr_h                                 cpu_sequencer                 -     @1364
+#           rsp_export                               uvm_analysis_export           -     @1371
+#           seq_item_export                          uvm_seq_item_pull_imp         -     @1465
+#           arbitration_queue                        array                         0     -    
+#           lock_queue                               array                         0     -    
+#           num_last_reqs                            integral                      32    'd1  
+#           num_last_rsps                            integral                      32    'd1  
+#       sb_h                                         cpu_scoreboard                -     @1356
+#         axi_raddr                                  uvm_analysis_imp_axi_raddr    -     @1566
+#         axi_rdata                                  uvm_analysis_imp_axi_rdata    -     @1574
+#         axi_waddr                                  uvm_analysis_imp_axi_waddr    -     @1550
+#         axi_wr                                     uvm_analysis_imp_axi_wr       -     @1542
+#         axi_wresp                                  uvm_analysis_imp_axi_wresp    -     @1558
+#         read                                       uvm_analysis_imp_read         -     @1534
+#         write                                      uvm_analysis_imp_write        -     @1526
+#     vseqr_h                                        top_vseqr                     -     @509 
+#       rsp_export                                   uvm_analysis_export           -     @516 
+#       seq_item_export                              uvm_seq_item_pull_imp         -     @610 
+#       arbitration_queue                            array                         0     -    
+#       lock_queue                                   array                         0     -    
+#       num_last_reqs                                integral                      32    'd1  
+#       num_last_rsps                                integral                      32    'd1  
+# --------------------------------------------------------------------------------------------
 # 
-# HDL call sequence:
-# Stopped at vip/axi_slave_vip/axi4_slave_agent.sv 66 Function axi4_slave_pkg/axi4_slave_agent::build_phase
-# called from  /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_common_phases.svh 54 Function uvm_pkg/uvm_build_phase::exec_func
-# called from  /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_topdown_phase.svh 111 Function uvm_pkg/uvm_topdown_phase::execute
-# called from  /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_topdown_phase.svh 78 Function uvm_pkg/uvm_topdown_phase::traverse
-# called from  /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_topdown_phase.svh 95 Function uvm_pkg/uvm_topdown_phase::traverse
-# called from  /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_topdown_phase.svh 95 Function uvm_pkg/uvm_topdown_phase::traverse
-# called from  /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_topdown_phase.svh 95 Function uvm_pkg/uvm_topdown_phase::traverse
-# called from  /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_topdown_phase.svh 95 Function uvm_pkg/uvm_topdown_phase::traverse
-# called from  /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_phase.svh 1156 Task uvm_pkg/uvm_phase::execute_phase
-# called from  /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_phase.svh 1847 Task uvm_pkg/uvm_phase::m_run_phases
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(167) @ 0: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [axi4_slave_driver_proxy] Slave driver proxy started - waiting for system reset
+# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(123) @ 10000: reporter [AXI4_SLAVE_DRIVER_BFM] SYSTEM RESET ACTIVATED
+# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(128) @ 30000: reporter [AXI4_SLAVE_DRIVER_BFM] SYSTEM RESET DE-ACTIVATED
+# ----------------------------------------------------------------------------
+# Name                 Type           Size  Value                             
+# ----------------------------------------------------------------------------
+# req                  axi4_slave_tx  -     @1615                             
+#   tx_type            string         4     READ                              
+#   arid               string         6     ARID_3                            
+#   araddr             integral       32    'hb16f568a                        
+#   arlen              integral       4     'd6                               
+#   arsize             string         13    READ_32_BYTES                     
+#   arburst            string         10    READ_FIXED                        
+#   arlock             string         21    READ_EXCLUSIVE_ACCESS             
+#   arcache            string         15    READ_MODIFIABLE                   
+#   arprot             string         34    READ_PRIVILEGED_SECURE_INSTRUCTION
+#   arqos              integral       4     'h0                               
+#   rid                string         5     RID_3                             
+#   rresp              string         9     READ_OKAY                         
+#   ruser              integral       4     'hd                               
+#   no_of_wait_states  integral       32    'h2                               
+# ----------------------------------------------------------------------------
+# pkt_type=WRITE_PKT sop=0xaa txn_id=0x4 addr=0x00000064 data = '{255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255} len=2 size=2 burst=1 lock=0 cache=0 prot=0 wr_en=1 rd_en=0 full=0 empty=0 wr_data=0x00000000000000000000000000000000 rd_data=0x00000000000000000000000000000000 eop=0x53 data='{255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255} strobe=15
+#                   30my cpu driver wr_data = 0xaa4000000642480fffffffffffffffff
+# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(187) @ 30000: reporter [AXI4_SLAVE_DRIVER_BFM] INSIDE WRITE DATA CHANNEL
+# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(138) @ 30000: reporter [AXI4_SLAVE_DRIVER_BFM] INSIDE WRITE_ADDRESS_PHASE
+#                   50my cpu driver wr_data = 0xffffffff530000000000000000000000
+# cpu scoreboard request received full=0 wr_data=0xaa4000000642480fffffffffffffffff fifo_size=0
+# UVM_INFO tb/cpu_agent/cpu_monitor.sv(43) @ 50000: uvm_test_top.env_h.cpu_env_h.cpu_agt_h.cpu_mon_h [cpu_monitor] WRITE: wr_en=1 full=0 wr_data=aa4000000642480fffffffffffffffff
+# popped request = 0xaa4000000642480fffffffffffffffff
+# pushing write response = 0x00000000000000000000000000aaf153
+# cpu scoreboard request received full=0 wr_data=0xffffffff530000000000000000000000 fifo_size=0
+# UVM_INFO tb/cpu_agent/cpu_monitor.sv(43) @ 70000: uvm_test_top.env_h.cpu_env_h.cpu_agt_h.cpu_mon_h [cpu_monitor] WRITE: wr_en=1 full=0 wr_data=ffffffff530000000000000000000000
+# popped request = 0xffffffff530000000000000000000000
+# ** Warning: (vsim-3829) tb/env/cpu_scoreboard.sv(207): Non-existent associative array entry. Returning default value.
+# pushing read response = 0x000000000000000000aa000000000153
+# pkt_type=WRITE_PKT sop=0xaa txn_id=0x0 addr=0x00000064 data = '{255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255} len=2 size=2 burst=1 lock=0 cache=0 prot=0 wr_en=1 rd_en=0 full=0 empty=0 wr_data=0x00000000000000000000000000000000 rd_data=0x00000000000000000000000000000000 eop=0x53 data='{255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255} strobe=15
+#                   70my cpu driver wr_data = 0xaa0000000642480fffffffffffffffff
+#                   90my cpu driver wr_data = 0xffffffff530000000000000000000000
+# cpu scoreboard request received full=0 wr_data=0xaa0000000642480fffffffffffffffff fifo_size=0
+# UVM_INFO tb/cpu_agent/cpu_monitor.sv(43) @ 90000: uvm_test_top.env_h.cpu_env_h.cpu_agt_h.cpu_mon_h [cpu_monitor] WRITE: wr_en=1 full=0 wr_data=aa0000000642480fffffffffffffffff
+# popped request = 0xaa0000000642480fffffffffffffffff
+# pushing write response = 0x00000000000000000000000000aaf153
+# cpu scoreboard request received full=0 wr_data=0xffffffff530000000000000000000000 fifo_size=0
+# UVM_INFO tb/cpu_agent/cpu_monitor.sv(43) @ 110000: uvm_test_top.env_h.cpu_env_h.cpu_agt_h.cpu_mon_h [cpu_monitor] WRITE: wr_en=1 full=0 wr_data=ffffffff530000000000000000000000
+# popped request = 0xffffffff530000000000000000000000
+# ** Warning: (vsim-3829) tb/env/cpu_scoreboard.sv(207): Non-existent associative array entry. Returning default value.
+# pushing read response = 0x000000000000000000aa000000000153
+# pkt_type=WRITE_PKT sop=0xaa txn_id=0x1 addr=0x00000064 data = '{255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255} len=2 size=2 burst=1 lock=0 cache=0 prot=0 wr_en=1 rd_en=0 full=0 empty=0 wr_data=0x00000000000000000000000000000000 rd_data=0x00000000000000000000000000000000 eop=0x53 data='{255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255} strobe=15
+#                  110my cpu driver wr_data = 0xaa1000000642480fffffffffffffffff
+#                  130my cpu driver wr_data = 0xffffffff530000000000000000000000
+# cpu scoreboard request received full=0 wr_data=0xaa1000000642480fffffffffffffffff fifo_size=0
+# UVM_INFO tb/cpu_agent/cpu_monitor.sv(43) @ 130000: uvm_test_top.env_h.cpu_env_h.cpu_agt_h.cpu_mon_h [cpu_monitor] WRITE: wr_en=1 full=0 wr_data=aa1000000642480fffffffffffffffff
+# popped request = 0xaa1000000642480fffffffffffffffff
+# pushing write response = 0x00000000000000000000000000aaf153
+# cpu scoreboard request received full=0 wr_data=0xffffffff530000000000000000000000 fifo_size=0
+# UVM_INFO tb/cpu_agent/cpu_monitor.sv(43) @ 150000: uvm_test_top.env_h.cpu_env_h.cpu_agt_h.cpu_mon_h [cpu_monitor] WRITE: wr_en=1 full=0 wr_data=ffffffff530000000000000000000000
+# popped request = 0xffffffff530000000000000000000000
+# ** Warning: (vsim-3829) tb/env/cpu_scoreboard.sv(207): Non-existent associative array entry. Returning default value.
+# pushing read response = 0x000000000000000000aa000000000153
+# pkt_type=WRITE_PKT sop=0xaa txn_id=0xf addr=0x00000064 data = '{255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255} len=2 size=2 burst=1 lock=0 cache=0 prot=0 wr_en=1 rd_en=0 full=0 empty=0 wr_data=0x00000000000000000000000000000000 rd_data=0x00000000000000000000000000000000 eop=0x53 data='{255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255} strobe=15
+#                  150my cpu driver wr_data = 0xaaf000000642480fffffffffffffffff
+#                  170my cpu driver wr_data = 0xffffffff530000000000000000000000
+# cpu scoreboard request received full=0 wr_data=0xaaf000000642480fffffffffffffffff fifo_size=0
+# UVM_INFO tb/cpu_agent/cpu_monitor.sv(43) @ 170000: uvm_test_top.env_h.cpu_env_h.cpu_agt_h.cpu_mon_h [cpu_monitor] WRITE: wr_en=1 full=0 wr_data=aaf000000642480fffffffffffffffff
+# popped request = 0xaaf000000642480fffffffffffffffff
+# pushing write response = 0x00000000000000000000000000aaf153
+# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(149) @ 170000: reporter [SLAVE_DRIVER_WADDR_PHASE] outside of awvalid
+# ** Error: Assertion error.
+#    Time: 170 ns Started: 170 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WA_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 93
+# cpu scoreboard request received full=0 wr_data=0xffffffff530000000000000000000000 fifo_size=0
+# UVM_INFO tb/cpu_agent/cpu_monitor.sv(43) @ 190000: uvm_test_top.env_h.cpu_env_h.cpu_agt_h.cpu_mon_h [cpu_monitor] WRITE: wr_en=1 full=0 wr_data=ffffffff530000000000000000000000
+# popped request = 0xffffffff530000000000000000000000
+# ** Warning: (vsim-3829) tb/env/cpu_scoreboard.sv(207): Non-existent associative array entry. Returning default value.
+# pushing read response = 0x000000000000000000aa000000000153
+# pkt_type=WRITE_PKT sop=0xaa txn_id=0x9 addr=0x00000064 data = '{255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255} len=2 size=2 burst=1 lock=0 cache=0 prot=0 wr_en=1 rd_en=0 full=0 empty=0 wr_data=0x00000000000000000000000000000000 rd_data=0x00000000000000000000000000000000 eop=0x53 data='{255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255} strobe=15
+#                  190my cpu driver wr_data = 0xaa9000000642480fffffffffffffffff
+# ** Error: Assertion error.
+#    Time: 190 ns Started: 170 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WA_STABLE_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 84
+# ** Error: Assertion error.
+#    Time: 190 ns Started: 190 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WA_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 93
+#                  210my cpu driver wr_data = 0xffffffff530000000000000000000000
+# cpu scoreboard request received full=0 wr_data=0xaa9000000642480fffffffffffffffff fifo_size=0
+# UVM_INFO tb/cpu_agent/cpu_monitor.sv(43) @ 210000: uvm_test_top.env_h.cpu_env_h.cpu_agt_h.cpu_mon_h [cpu_monitor] WRITE: wr_en=1 full=0 wr_data=aa9000000642480fffffffffffffffff
+# popped request = 0xaa9000000642480fffffffffffffffff
+# pushing write response = 0x00000000000000000000000000aaf153
+# UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(198) @ 210000: reporter [axi4_slave_seq_item_conv_class] Converting write response: input bid = 0
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(209) @ 210000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [axi4_slave_driver_proxy] WRITE_ADDRESS_CHANNEL::Received write address packet, awid = 0
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(399) @ 210000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_ADDRESS_CHANNEL_STATUS =
+#  FINISHED
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(400) @ 210000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_WDATA_CHANNEL_STATUS = 
+#  RUNNING
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(401) @ 210000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_WRESP_CHANNEL_STATUS = 
+# WAITING
+# ** Error: Assertion error.
+#    Time: 210 ns Started: 210 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WA_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 93
+# cpu scoreboard request received full=0 wr_data=0xffffffff530000000000000000000000 fifo_size=0
+# UVM_INFO tb/cpu_agent/cpu_monitor.sv(43) @ 230000: uvm_test_top.env_h.cpu_env_h.cpu_agt_h.cpu_mon_h [cpu_monitor] WRITE: wr_en=1 full=0 wr_data=ffffffff530000000000000000000000
+# popped request = 0xffffffff530000000000000000000000
+# ** Warning: (vsim-3829) tb/env/cpu_scoreboard.sv(207): Non-existent associative array entry. Returning default value.
+# pushing read response = 0x000000000000000000aa000000000153
+# UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(198) @ 230000: reporter [axi4_slave_seq_item_conv_class] Converting write response: input bid = 0
+# UVM_INFO hdl_top/slave_assertions.sv(103) @ 230000: reporter [AXI4_SLAVE_ASSERTIONS] AXI_WA_VALID_STABLE_CHECK assertion PASSED @230000
+# ** Error: Assertion error.
+#    Time: 230 ns Started: 230 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WA_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 93
+# UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(198) @ 250000: reporter [axi4_slave_seq_item_conv_class] Converting write response: input bid = 0
+# ** Error: Assertion error.
+#    Time: 250 ns Started: 250 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WA_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 93
+# ** Error: Assertion error.
+#    Time: 270 ns Started: 270 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(198) @ 290000: reporter [axi4_slave_seq_item_conv_class] Converting write response: input bid = 0
+# UVM_ERROR tb/env/cpu_scoreboard.sv(59) @ 290000: uvm_test_top.env_h.cpu_env_h.sb_h [cpu_scoreboard] AXI W-CHANNEL BEAT COUNT MISMATCH: awaddr=0x0 awid=AWID_0 awlen=0 -> expected 1 W beats, slave received 17 (likely the beat_cnt/WVALID FSM bug in AXI_MASTER_WRITE_CONTROL.v)
+# UVM_ERROR tb/env/cpu_scoreboard.sv(70) @ 290000: uvm_test_top.env_h.cpu_env_h.sb_h [cpu_scoreboard] AXI W-CHANNEL WSTRB COUNT MISMATCH: awaddr=0x0 expected 1, got 17
+# ** Error: Assertion error.
+#    Time: 290 ns Started: 290 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(198) @ 310000: reporter [axi4_slave_seq_item_conv_class] Converting write response: input bid = 0
+# UVM_ERROR tb/env/cpu_scoreboard.sv(59) @ 310000: uvm_test_top.env_h.cpu_env_h.sb_h [cpu_scoreboard] AXI W-CHANNEL BEAT COUNT MISMATCH: awaddr=0x0 awid=AWID_0 awlen=0 -> expected 1 W beats, slave received 17 (likely the beat_cnt/WVALID FSM bug in AXI_MASTER_WRITE_CONTROL.v)
+# UVM_ERROR tb/env/cpu_scoreboard.sv(70) @ 310000: uvm_test_top.env_h.cpu_env_h.sb_h [cpu_scoreboard] AXI W-CHANNEL WSTRB COUNT MISMATCH: awaddr=0x0 expected 1, got 17
+# ** Error: Assertion error.
+#    Time: 310 ns Started: 310 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(198) @ 330000: reporter [axi4_slave_seq_item_conv_class] Converting write response: input bid = 0
+# UVM_ERROR tb/env/cpu_scoreboard.sv(59) @ 330000: uvm_test_top.env_h.cpu_env_h.sb_h [cpu_scoreboard] AXI W-CHANNEL BEAT COUNT MISMATCH: awaddr=0x0 awid=AWID_0 awlen=0 -> expected 1 W beats, slave received 17 (likely the beat_cnt/WVALID FSM bug in AXI_MASTER_WRITE_CONTROL.v)
+# UVM_ERROR tb/env/cpu_scoreboard.sv(70) @ 330000: uvm_test_top.env_h.cpu_env_h.sb_h [cpu_scoreboard] AXI W-CHANNEL WSTRB COUNT MISMATCH: awaddr=0x0 expected 1, got 17
+# ** Error: Assertion error.
+#    Time: 330 ns Started: 330 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(198) @ 350000: reporter [axi4_slave_seq_item_conv_class] Converting write response: input bid = 0
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(228) @ 350000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [axi4_slave_driver_proxy] W data sampled | beats=17 wlast=0
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(336) @ 350000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [axi4_slave_driver_proxy] WRITE_RESPONSE_CHANNEL::Slave driver sending out bid = 0
+# UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(198) @ 390000: reporter [axi4_slave_seq_item_conv_class] Converting write response: input bid = 0
+# PACKET INPUT SIZE IS 0
+# ------------------------------------------------------------
+# Name           Type           Size  Value                   
+# ------------------------------------------------------------
+# axi4_slave_tx  axi4_slave_tx  -     @1829                   
+#   tx_type      string         5     WRITE                   
+#   awid         string         6     AWID_0                  
+#   awaddr       integral       32    'h0                     
+#   awlen        integral       4     'd0                     
+#   awsize       string         12    WRITE_1_BYTE            
+#   awburst      string         11    WRITE_FIXED             
+#   awlock       string         19    WRITE_NORMAL_ACCESS     
+#   awcache      string         16    WRITE_BUFFERABLE        
+#   awprot       string         24    WRITE_NORMAL_SECURE_DATA
+#   awqos        integral       4     'h0                     
+#   wdata[0]     integral       32    'hffffffff              
+#   wdata[1]     integral       32    'hffffffff              
+#   wstrb[0]     integral       4     'hf                     
+#   wstrb[1]     integral       4     'hf                     
+#   wlast        integral       1     'd0                     
+#   wuser        integral       4     'd0                     
+#   bid          string         5     BID_0                   
+#   bresp        string         10    WRITE_OKAY              
+#   buser        integral       4     'd0                     
+# ------------------------------------------------------------
+# UVM_INFO @ 390000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_write_seqr_h [Sequencer] Dropping response for sequence 3, sequence not found.  Probable cause: sequence exited or has been killed
+# UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(198) @ 390000: reporter [axi4_slave_seq_item_conv_class] Converting write response: input bid = 0
+# UVM_INFO vip/axi_slave_vip/axi4_slave_monitor_proxy.sv(195) @ 390000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_mon_proxy_h [axi4_slave_monitor_proxy] Sending out write response, bid = 0
+# UVM_ERROR tb/env/cpu_scoreboard.sv(99) @ 390000: uvm_test_top.env_h.cpu_env_h.sb_h [cpu_scoreboard] AXI B-CHANNEL ID MISMATCH: expected bid=AWID_4 (from awaddr=0x64), got bid=BID_0
+# UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(198) @ 570000: reporter [axi4_slave_seq_item_conv_class] Converting write response: input bid = 0
+# UVM_INFO hdl_top/slave_assertions.sv(103) @ 570000: reporter [AXI4_SLAVE_ASSERTIONS] AXI_WA_VALID_STABLE_CHECK assertion PASSED @570000
+# ** Error: Assertion error.
+#    Time: 570 ns Started: 570 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WA_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 93
+# ** Error: Assertion error.
+#    Time: 590 ns Started: 590 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 610 ns Started: 610 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 630 ns Started: 630 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 650 ns Started: 650 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 670 ns Started: 670 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 690 ns Started: 690 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 710 ns Started: 710 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 730 ns Started: 730 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 750 ns Started: 750 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 770 ns Started: 770 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 790 ns Started: 790 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 810 ns Started: 810 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 830 ns Started: 830 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 850 ns Started: 850 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 870 ns Started: 870 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 890 ns Started: 890 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 910 ns Started: 910 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 930 ns Started: 930 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 950 ns Started: 950 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 970 ns Started: 970 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 990 ns Started: 990 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1010 ns Started: 1010 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1030 ns Started: 1030 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1050 ns Started: 1050 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1070 ns Started: 1070 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1090 ns Started: 1090 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1110 ns Started: 1110 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1130 ns Started: 1130 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1150 ns Started: 1150 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1170 ns Started: 1170 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1190 ns Started: 1190 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1210 ns Started: 1210 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# pkt_type= READ_PKT sop=0xaa txn_id=0xf addr=0x00000064 len=1 size=1 burst=1 lock=0 cache=0 prot=0 wr_en=1 rd_en=0 full=0 empty=0 wr_data=0x00000000000000000000000000000000 rd_data=0x00000000000000000000000000000000 eop=0x53 data='{0} strobe=0
+#                 1230my cpu driver wr_data = 0xaaf00000064128000053000000000000
+# ** Error: Assertion error.
+#    Time: 1230 ns Started: 1230 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# cpu scoreboard request received full=0 wr_data=0xaaf00000064128000053000000000000 fifo_size=0
+# UVM_INFO tb/cpu_agent/cpu_monitor.sv(43) @ 1250000: uvm_test_top.env_h.cpu_env_h.cpu_agt_h.cpu_mon_h [cpu_monitor] WRITE: wr_en=1 full=0 wr_data=aaf00000064128000053000000000000
+# popped request = 0xaaf00000064128000053000000000000
+# pushing write response = 0x00000000000000000000000000aa0153
+# ** Error: Assertion error.
+#    Time: 1250 ns Started: 1250 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1270 ns Started: 1270 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1290 ns Started: 1290 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1310 ns Started: 1310 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1330 ns Started: 1330 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1350 ns Started: 1350 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1370 ns Started: 1370 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# UVM_INFO hdl_top/slave_agent_bfm/axi4_slave_driver_bfm.sv(279) @ 1390000: reporter [SLAVE_DRIVER_RADDR_PHASE] outside of arvalid
+# ** Error: Assertion error.
+#    Time: 1390 ns Started: 1390 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_RA_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 183
+# ** Error: Assertion error.
+#    Time: 1390 ns Started: 1390 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(282) @ 1410000: reporter [axi4_slave_seq_item_conv_class] Converting read data: rlast = 0
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(527) @ 1410000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_READ_CHANNEL_STATUS = 
+#  FINISHED
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(528) @ 1410000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [SLAVE_STATUS_CHECK] AFTER_FORK_JOIN_ANY:: SLAVE_RDATA_CHANNEL_STATUS = 
+#  RUNNING
+# UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(282) @ 1410000: reporter [axi4_slave_seq_item_conv_class] Converting read data: rlast = 0
+# UVM_INFO vip/axi_slave_vip/axi4_slave_driver_proxy.sv(505) @ 1410000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_drv_proxy_h [axi4_slave_driver_proxy] from_read_class:: struct_read_data_packet = 
+#  15 100 1 1 1 0 0 0 0 0 1 0 {0 0 0 0 0 0 0 0 0 0 0 0 1584217288 3900025808 4263199672 2740334234 2760857111} {0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0} {0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0} 0 0 0 0 0 0 0
+# ** Error: Assertion error.
+#    Time: 1410 ns Started: 1410 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_RA_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 183
+# ** Error: Assertion error.
+#    Time: 1410 ns Started: 1410 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1430 ns Started: 1430 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_RA_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 183
+# ** Error: Assertion error.
+#    Time: 1430 ns Started: 1430 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(282) @ 1450000: reporter [axi4_slave_seq_item_conv_class] Converting read data: rlast = 0
+# UVM_INFO vip/axi_slave_vip/axi4_slave_monitor_proxy.sv(255) @ 1450000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_mon_proxy_h [axi4_slave_monitor_proxy] Packet received from axi4_slave_read_data is 
+#  -----------------------------------------------------------------
+# Name                 Type           Size  Value                  
+# -----------------------------------------------------------------
+# tx                   axi4_slave_tx  -     @1883                  
+#   tx_type            string         4     READ                   
+#   arid               string         6     ARID_0                 
+#   araddr             integral       32    'h0                    
+#   arlen              integral       4     'd0                    
+#   arsize             string         11    READ_1_BYTE            
+#   arburst            string         10    READ_FIXED             
+#   arlock             string         18    READ_NORMAL_ACCESS     
+#   arcache            string         15    READ_BUFFERABLE        
+#   arprot             string         23    READ_NORMAL_SECURE_DATA
+#   arqos              integral       4     'h0                    
+#   rid                string         6     RID_15                 
+#   rresp              string         11    READ_SLVERR            
+#   ruser              integral       4     'h0                    
+#   no_of_wait_states  integral       32    'h0                    
+# -----------------------------------------------------------------
 # 
-#  quit
-# End time: 12:56:50 on Aug 17,2026, Elapsed time: 0:00:05
-# Errors: 2, Warnings: 31
+# UVM_ERROR tb/env/cpu_scoreboard.sv(134) @ 1450000: uvm_test_top.env_h.cpu_env_h.sb_h [cpu_scoreboard] AXI R-CHANNEL BEAT COUNT MISMATCH: araddr=0x64 arlen=1 -> expected 2 R beats, got 0
+# UVM_ERROR tb/env/cpu_scoreboard.sv(145) @ 1450000: uvm_test_top.env_h.cpu_env_h.sb_h [cpu_scoreboard] AXI R-CHANNEL ID MISMATCH: expected arid=ARID_15, got rid on packet for araddr=0x64
+# ** Error: Assertion error.
+#    Time: 1450 ns Started: 1430 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_RA_STABLE_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 174
+# ** Error: Assertion error.
+#    Time: 1450 ns Started: 1450 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1470 ns Started: 1470 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# UVM_INFO @ 1490000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_read_seqr_h [Sequencer] Dropping response for sequence 5, sequence not found.  Probable cause: sequence exited or has been killed
+# UVM_INFO vip/axi_slave_vip/axi4_slave_seq_item_converter.sv(282) @ 1490000: reporter [axi4_slave_seq_item_conv_class] Converting read data: rlast = 1
+# UVM_INFO vip/axi_slave_vip/axi4_slave_monitor_proxy.sv(255) @ 1490000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_mon_proxy_h [axi4_slave_monitor_proxy] Packet received from axi4_slave_read_data is 
+#  -----------------------------------------------------------------
+# Name                 Type           Size  Value                  
+# -----------------------------------------------------------------
+# tx                   axi4_slave_tx  -     @1895                  
+#   tx_type            string         4     READ                   
+#   arid               string         6     ARID_0                 
+#   araddr             integral       32    'h0                    
+#   arlen              integral       4     'd0                    
+#   arsize             string         11    READ_1_BYTE            
+#   arburst            string         10    READ_FIXED             
+#   arlock             string         18    READ_NORMAL_ACCESS     
+#   arcache            string         15    READ_BUFFERABLE        
+#   arprot             string         23    READ_NORMAL_SECURE_DATA
+#   arqos              integral       4     'h0                    
+#   rid                string         6     RID_15                 
+#   rresp              string         11    READ_SLVERR            
+#   ruser              integral       4     'h0                    
+#   no_of_wait_states  integral       32    'h0                    
+# -----------------------------------------------------------------
+# 
+# UVM_ERROR tb/env/cpu_scoreboard.sv(124) @ 1490000: uvm_test_top.env_h.cpu_env_h.sb_h [cpu_scoreboard] AXI R-CHANNEL: got read data with no outstanding AR (araddr=0x0)
+# ** Error: Assertion error.
+#    Time: 1490 ns Started: 1490 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1510 ns Started: 1510 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1530 ns Started: 1530 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1550 ns Started: 1550 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1570 ns Started: 1570 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1590 ns Started: 1590 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1610 ns Started: 1610 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1630 ns Started: 1630 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1650 ns Started: 1650 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1670 ns Started: 1670 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1690 ns Started: 1690 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1710 ns Started: 1710 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1730 ns Started: 1730 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1750 ns Started: 1750 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1770 ns Started: 1770 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1790 ns Started: 1790 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1810 ns Started: 1810 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1830 ns Started: 1830 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1850 ns Started: 1850 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1870 ns Started: 1870 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1890 ns Started: 1890 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1910 ns Started: 1910 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1930 ns Started: 1930 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1950 ns Started: 1950 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1970 ns Started: 1970 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 1990 ns Started: 1990 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2010 ns Started: 2010 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2030 ns Started: 2030 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2050 ns Started: 2050 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2070 ns Started: 2070 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2090 ns Started: 2090 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2110 ns Started: 2110 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2130 ns Started: 2130 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2150 ns Started: 2150 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2170 ns Started: 2170 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2190 ns Started: 2190 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2210 ns Started: 2210 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2230 ns Started: 2230 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2250 ns Started: 2250 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2270 ns Started: 2270 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2290 ns Started: 2290 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2310 ns Started: 2310 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2330 ns Started: 2330 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2350 ns Started: 2350 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2370 ns Started: 2370 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2390 ns Started: 2390 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2410 ns Started: 2410 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2430 ns Started: 2430 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2450 ns Started: 2450 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2470 ns Started: 2470 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2490 ns Started: 2490 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2510 ns Started: 2510 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2530 ns Started: 2530 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2550 ns Started: 2550 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2570 ns Started: 2570 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2590 ns Started: 2590 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2610 ns Started: 2610 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2630 ns Started: 2630 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2650 ns Started: 2650 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2670 ns Started: 2670 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2690 ns Started: 2690 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2710 ns Started: 2710 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2730 ns Started: 2730 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2750 ns Started: 2750 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2770 ns Started: 2770 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2790 ns Started: 2790 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2810 ns Started: 2810 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2830 ns Started: 2830 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2850 ns Started: 2850 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2870 ns Started: 2870 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2890 ns Started: 2890 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2910 ns Started: 2910 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2930 ns Started: 2930 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2950 ns Started: 2950 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2970 ns Started: 2970 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 2990 ns Started: 2990 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 3010 ns Started: 3010 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 3030 ns Started: 3030 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 3050 ns Started: 3050 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 3070 ns Started: 3070 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 3090 ns Started: 3090 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 3110 ns Started: 3110 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 3130 ns Started: 3130 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 3150 ns Started: 3150 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 3170 ns Started: 3170 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 3190 ns Started: 3190 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 3210 ns Started: 3210 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# ** Error: Assertion error.
+#    Time: 3230 ns Started: 3230 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_UNKNOWN_SIGNALS_CHECK File: hdl_top/slave_assertions.sv Line: 124
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 3250000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO vip/axi_slave_vip/axi4_slave_coverage.sv(189) @ 3250000: uvm_test_top.env_h.axi_vip_env_h.slave_agt_h.axi4_slave_cov_h [axi4_slave_coverage] AXI4 Slave Agent Coverage = 31.93 %
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   58
+# UVM_WARNING :    0
+# UVM_ERROR :   10
+# UVM_FATAL :    0
+# ** Report counts by id
+# [AXI4_SLAVE_ASSERTIONS]     2
+# [AXI4_SLAVE_DRIVER_BFM]     4
+# [Questa UVM]     2
+# [RNTST]     1
+# [SLAVE_ASSERTIONS]     1
+# [SLAVE_DRIVER_RADDR_PHASE]     1
+# [SLAVE_DRIVER_WADDR_PHASE]     1
+# [SLAVE_STATUS_CHECK]     5
+# [Sequencer]     2
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# [axi4 slave agent bfm]     1
+# [axi4 slave driver bfm]     1
+# [axi4 slave monitor bfm]     1
+# [axi4_slave_coverage]     1
+# [axi4_slave_driver_proxy]     5
+# [axi4_slave_monitor_proxy]     3
+# [axi4_slave_seq_item_conv_class]    14
+# [cpu_monitor]    11
+# [cpu_scoreboard]    10
+# ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 3250 ns  Iteration: 54  Instance: /tb_top
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+# ** Error: Assertion error.
+#    Time: 3250 ns Started: 590 ns  Scope: hdl_top.axi4_slave_agent_bfm[0].axi4_slave_agent_bfm_h.axi4_slave_mon_bfm_h.S_A.AXI_WD_VALID_STABLE_CHECK File: hdl_top/slave_assertions.sv Line: 133
+# End time: 15:29:53 on Aug 17,2026, Elapsed time: 0:01:07
+# Errors: 149, Warnings: 62

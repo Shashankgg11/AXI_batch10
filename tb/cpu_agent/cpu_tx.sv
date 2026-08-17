@@ -16,7 +16,7 @@ class cpu_tx extends uvm_sequence_item;
   rand bit [1:0] cache;
   rand bit [2:0] prot;
 
-  rand bit strobe[];
+  rand bit[3:0] strobe;
 
   rand bit [7:0] data[];
 
@@ -53,12 +53,13 @@ class cpu_tx extends uvm_sequence_item;
      }
   }
 
-  constraint strobe_size_c
+/* 
+ constraint strobe_size_c
   {
     if(pkt_type == WRITE_PKT) strobe.size() == data.size();
     else strobe.size() == 4;
   }
-
+*/
   constraint read_pkt_c
   {
     if(pkt_type == READ_PKT)
